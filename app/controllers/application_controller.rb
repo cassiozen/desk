@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
   private
   def load_portal
-    @portal = Portal.find_by_url!(request.subdomain) rescue nil
+    @portal = Portal.find_by_url!(request.subdomain)
   end
 end
