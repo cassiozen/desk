@@ -1,0 +1,88 @@
+// Core variables and mixins
+@import "avalon/variables.less";
+@import "avalon/avalon-helpers.less";   // Helper Classes
+
+// INCLUDE ALL BOOTSTRAP FILES
+//------------------------------
+
+@import "bootstrap/mixins.less";
+@import "avalon/avalon-mixins.less";
+
+// Reset
+@import "bootstrap/normalize.less";
+@import "bootstrap/print.less";
+
+// Core CSS
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "bootstrap/code.less";
+@import "bootstrap/grid.less";
+
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+
+// Components: common
+@import "bootstrap/component-animations.less";
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/list-group.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/close.less";
+
+// Components: Nav
+@import "bootstrap/navs.less";
+@import "bootstrap/button-groups.less";
+@import "bootstrap/breadcrumbs.less";
+@import "bootstrap/pagination.less";
+@import "bootstrap/pager.less";
+
+// Components: Popovers
+@import "bootstrap/modals.less";
+@import "bootstrap/tooltip.less";
+@import "bootstrap/popovers.less";
+
+// Components: Misc
+@import "bootstrap/alerts.less";
+@import "bootstrap/thumbnails.less";
+@import "bootstrap/media.less";
+@import "bootstrap/labels.less";
+@import "bootstrap/badges.less";
+@import "bootstrap/progress-bars.less";
+@import "bootstrap/carousel.less";
+@import "bootstrap/jumbotron.less";
+@import "bootstrap/input-groups.less";
+
+// Utility classes
+@import "bootstrap/utilities.less"; // Has to be last to override when necessary
+@import "bootstrap/responsive-utilities.less";
+@import "bootstrap/responsive-embed.less";
+
+// EXTEND BOOTSTRAP FILES WITH Avalon
+//----------------------------------
+
+@import "avalon/colorschemes.less";  // Color Schemes
+
+// @import "avalon/yamm.less";      // Megamenu
+@import "avalon/grid-sh.less";     // Same Height Column
+
+@import "avalon/extend-core.less";   //scaffolding, type, code, grid, tables, forms, buttons
+@import "avalon/extend-common.less"; //dropdown, list-groups, wells, close
+@import "avalon/extend-nav.less";    //navs, button-groups, breadcrumbs, paginations, pager
+@import "avalon/extend-popovers.less"; //modals, tooltips, popovers
+@import "avalon/extend-misc.less";   //alerts, thumbnails, labels, badges, progressbars, input groups, carousel...
+
+// // Theme Specific
+// @import "avalon/layout.less";      // Sidebar/Layout of the theme
+// @import "avalon/topnav.less";      // Topnav
+// @import "avalon/rightbar.less";    // Rightbar
+// @import "avalon/leftbar.less";     // Leftbar
+
+@import "avalon/navbar.less";      // Modified navbar of Bootstrap
+@import "avalon/panels.less";      // Completely overhauled panels
+
+// @import "avalon/pricing-table.less";   // Pricing Table Component
+// @import "avalon/tiles.less";       // Tiles Component
+// @import "avalon/panels-custom.less";   // Custom Panels Component
+// @import "avalon/tabs.less";      // Inline Tabs and Accordions Component
+// @import "avalon/timeline.less";    // Timeline
+// @import "avalon/weather.less";     // Weather Widget
