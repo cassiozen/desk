@@ -21,7 +21,5 @@ test:
 
 production:
   <<: *default
-  database: desk_prod
-  host: localhost
-  username: myapp
-  password: password1
+  database: desk_productiom
+  password: <%= ENV['DESK_DATABASE_PASSWORD'] %>
