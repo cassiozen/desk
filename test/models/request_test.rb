@@ -9,38 +9,34 @@ class RequestTest < ActiveSupport::TestCase
 
   test "can transition from open to pending state" do
     req = Request.create!
-    req.pend
+    req.change_state("pending")
     assert req.pending?
   end
 
   test "can transition from open to closed state" do
     req = Request.create!
-    req.close
-    assert req.closed?
-  end
-
-  test "can transition from pending to closed state" do
-    req = Request.create!
-    req.pend
-    assert req.pending?
-    req.close
+    req.change_state("closed")
     assert req.closed?
   end
 
   test "can be reopened" do
     req = Request.create!
-    req.close
+    req.change_state("closed")
     assert req.closed?
-    req.reopen
+    req.change_state("open")
     assert req.open?
   end
 
-  test "can't go from closed to pending" do
+  test "can't transition to unexisting states" do
     req = Request.create!
-    req.close
-    assert req.closed?
-    req.pend
-    assert !req.pending?
+    assert_raises(ArgumentError) { req.change_state("bazinga") }
+  end
+
+  test "Don't register a new state change transition when trying to change to same state" do
+    req = Request.create!
+    prev_reqstates = RequestState.count
+    req.change_state("open")
+    assert_equal prev_reqstates, RequestState.count
   end
 
   test "should list all open requests" do

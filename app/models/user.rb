@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   belongs_to :portal
   belongs_to :profile, polymorphic: true
+  has_many :interactions
 
   # Include default devise modules. Others available are:
   #  :confirmable, :validatable, :lockable, :timeoutable and :omniauthable

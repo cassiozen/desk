@@ -1,0 +1,96 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+req1_inter_1:
+  request: one
+  user: john
+  interacteable: message_1 (Message)
+
+req1_inter_2:
+  request: one
+  user: anna
+  interacteable: message_2 (Message)
+
+req1_inter_3:
+  request: one
+  user: anna
+  interacteable: state_change_2 (RequestState)
+
+req1_inter_4:
+  request: one
+  user: anna
+  interacteable: message_3 (Message)
+
+req1_inter_5:
+  request: one
+  user: anna
+  interacteable: state_change_3 (RequestState)
+
+req1_inter_6:
+  request: one
+  user: john
+  interacteable: message_4 (Message)
+
+req1_inter_7:
+  request: one
+  user: john
+  interacteable: state_change_4 (RequestState)
+
+req1_inter_8:
+  request: one
+  user: anna
+  interacteable: message_5 (Message)
+
+req1_inter_9:
+  request: one
+  user: anna
+  interacteable: state_change_5 (RequestState)
+
+req2_inter_1:
+  request: two
+  user: john
+  interacteable: message_6 (Message)
+
+req2_inter_2:
+  request: two
+  user: george
+  interacteable: message_7 (Message)
+
+req2_inter_3:
+  request: two
+  user: george
+  interacteable: state_change_7 (RequestState)
+
+req3_inter_1:
+  request: three
+  user: jane
+  interacteable: message_8 (Message)
+
+req3_inter_2:
+  request: three
+  user: anna
+  interacteable: message_9 (Message)
+
+req3_inter_3:
+  request: three
+  user: anna
+  interacteable: state_change_9 (RequestState)
+
+req4_inter_1:
+  request: four
+  user: jane
+  interacteable: message_10 (Message)
+
+req5_inter_1:
+  request: five
+  user: jane
+  interacteable: message_11 (Message)
+
+req5_inter_2:
+  request: five
+  user: george
+  interacteable: message_12 (Message)
+
+req5_inter_3:
+  request: five
+  user: george
+  interacteable: state_change_12 (RequestState)

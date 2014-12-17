@@ -3,6 +3,7 @@ class Request < ActiveRecord::Base
   belongs_to :requestor, class_name: "RequestorProfile", foreign_key: "requestor_id"
   belongs_to :assignee, class_name: "AssigneeProfile", foreign_key: "assignee_id"
   has_many :state_changes, class_name: "RequestState"
+  has_many :interactions
   before_create :set_initial_state
 
 
@@ -45,17 +46,10 @@ class Request < ActiveRecord::Base
     state_changes.build({state:'open'}) if fetch_current_state.nil?
   end
 
-  # Transition state methods
-  def close
-    state_changes.create! state: "closed" if open? or pending?
-  end
-
-  def reopen
-    state_changes.create! state: "open" if closed? or pending?
-  end
-
-  def pend
-    state_changes.create! state: "pending" if open? # Can't go from closed to pending
+  # Transition state
+  def change_state(state)
+    raise ArgumentError, "Invalid state: #{state}" unless STATES.include? state
+    state_changes.create! state: state unless fetch_current_state == state
   end
 
 end

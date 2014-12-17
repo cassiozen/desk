@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216193022) do
+ActiveRecord::Schema.define(version: 20141217174541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,22 @@ ActiveRecord::Schema.define(version: 20141216193022) do
   create_table "assignee_profiles", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "interactions", force: true do |t|
+    t.integer  "request_id"
+    t.integer  "user_id"
+    t.integer  "interacteable_id"
+    t.string   "interacteable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "interactions", ["request_id"], name: "index_interactions_on_request_id", using: :btree
+  add_index "interactions", ["user_id"], name: "index_interactions_on_user_id", using: :btree
+
+  create_table "messages", force: true do |t|
+    t.text "body"
   end
 
   create_table "portals", force: true do |t|
