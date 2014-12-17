@@ -1,15 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  portal_id: 
-  requestor_id: 1
-  assignee_id: 1
+  portal: codify
+  requestor: john
+  assignee_id: anna
   due_in: 2014-12-16 17:16:30
-  properties: 
 
 two:
-  portal_id: 
-  requestor_id: 1
-  assignee_id: 1
+  portal: codify
+  requestor_id: john
+  assignee_id: george
   due_in: 2014-12-16 17:16:30
-  properties: 
+
+three:
+  portal: codify
+  requestor_id: jane
+  assignee_id: anna
+  due_in: 2014-12-16 17:16:30
+
+four:
+  portal: codify
+  requestor_id: jane
+  assignee_id: george
+  due_in: 2014-12-16 17:16:30
+
+five:
+  portal: codify
+  requestor_id: jane
+  assignee_id: george
+  due_in: 2014-12-16 17:16:30

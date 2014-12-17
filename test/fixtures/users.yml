@@ -4,8 +4,30 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+john:
+  name: John Doe
+  portal: codify
+  email: johndoe@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  profile: john (RequestorProfile)
+
+jane:
+  name: Mary Jane
+  portal: codify
+  email: maryjane@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  profile: jane (RequestorProfile)
+
+anna:
+  name: Anna Louise
+  portal: codify
+  email: anna@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  profile: anna (AssigneeProfile)
+
+george:
+  name: George Harisson
+  portal: codify
+  email: george@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  profile: george (AssigneeProfile)

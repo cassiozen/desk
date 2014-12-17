@@ -1,9 +1,61 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  request_id: 
-  state: MyString
+state_change_1:
+  id: 1
+  request: one
+  state: open
 
-two:
-  request_id: 
-  state: MyString
+state_change_2:
+  id: 2
+  request: one
+  state: pending
+
+state_change_3:
+  id: 3
+  request: one
+  state: closed
+
+state_change_4:
+  id: 4
+  request: one
+  state: open
+
+state_change_5:
+  id: 5
+  request: one
+  state: closed
+
+state_change_6:
+  id: 6
+  request: two
+  state: open
+
+state_change_7:
+  id: 7
+  request: two
+  state: pending
+
+state_change_8:
+  id: 8
+  request: three
+  state: open
+
+state_change_9:
+  id: 9
+  request: three
+  state: closed
+
+state_change_10:
+  id: 10
+  request: four
+  state: open
+
+state_change_11:
+  id: 11
+  request: five
+  state: open
+
+state_change_12:
+  id: 12
+  request: five
+  state: closed
