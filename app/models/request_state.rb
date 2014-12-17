@@ -1,5 +1,5 @@
 class RequestState < ActiveRecord::Base
-  belongs_to :request
+  belongs_to :request, touch: true
   validates_inclusion_of :state, in: Request::STATES
 
   def self.with_last_state(state)

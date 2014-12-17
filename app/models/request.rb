@@ -31,12 +31,18 @@ class Request < ActiveRecord::Base
 
   # Get current state (with syntatic-sugar expressions for each possible state)
   delegate :open?, :closed?, :pending?, to: :current_state
-  def current_state
+
+  def fetch_current_state
     (state_changes.last.try(:state)).inquiry rescue nil
   end
 
+  # Cache request's current state
+  def current_state
+    Rails.cache.fetch([self, "current_state"]) { fetch_current_state }
+  end
+
   def set_initial_state
-    state_changes.build({state:'open'}) if current_state.nil?
+    state_changes.build({state:'open'}) if fetch_current_state.nil?
   end
 
   # Transition state methods
