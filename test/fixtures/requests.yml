@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  portal_id: 
+  requestor_id: 1
+  assignee_id: 1
+  due_in: 2014-12-16 17:16:30
+  properties: 
+
+two:
+  portal_id: 
+  requestor_id: 1
+  assignee_id: 1
+  due_in: 2014-12-16 17:16:30
+  properties: 

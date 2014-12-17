@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215202345) do
+ActiveRecord::Schema.define(version: 20141216193022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "assignee_profiles", force: true do |t|
     t.datetime "created_at"
@@ -29,10 +30,31 @@ ActiveRecord::Schema.define(version: 20141215202345) do
     t.datetime "updated_at"
   end
 
+  create_table "request_states", force: true do |t|
+    t.integer  "request_id"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "request_states", ["request_id"], name: "index_request_states_on_request_id", using: :btree
+
   create_table "requestor_profiles", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "requests", force: true do |t|
+    t.integer  "portal_id"
+    t.integer  "requestor_id"
+    t.integer  "assignee_id"
+    t.datetime "due_in"
+    t.hstore   "properties"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "requests", ["portal_id"], name: "index_requests_on_portal_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false

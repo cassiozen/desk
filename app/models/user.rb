@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  belongs_to :portal
   belongs_to :profile, polymorphic: true
 
   # Include default devise modules. Others available are:
