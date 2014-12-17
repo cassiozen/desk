@@ -3,7 +3,7 @@ class Request < ActiveRecord::Base
   belongs_to :requestor, class_name: "RequestorProfile", foreign_key: "requestor_id"
   belongs_to :assignee, class_name: "AssigneeProfile", foreign_key: "assignee_id"
   has_many :state_changes, class_name: "RequestState"
-  has_many :interactions
+  has_many :interactions, dependent: :destroy
   before_create :set_initial_state
 
 

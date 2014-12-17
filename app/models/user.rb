@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   belongs_to :portal
-  belongs_to :profile, polymorphic: true
+  belongs_to :profile, polymorphic: true, dependent: :destroy
   has_many :interactions
 
   # Include default devise modules. Others available are:
