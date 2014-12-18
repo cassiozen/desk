@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217174541) do
+ActiveRecord::Schema.define(version: 20141218232843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20141217174541) do
   end
 
   create_table "interactions", force: true do |t|
-    t.integer  "request_id"
+    t.integer  "issue_id"
     t.integer  "user_id"
     t.integer  "interacteable_id"
     t.string   "interacteable_type"
@@ -31,37 +31,20 @@ ActiveRecord::Schema.define(version: 20141217174541) do
     t.datetime "updated_at"
   end
 
-  add_index "interactions", ["request_id"], name: "index_interactions_on_request_id", using: :btree
+  add_index "interactions", ["issue_id"], name: "index_interactions_on_issue_id", using: :btree
   add_index "interactions", ["user_id"], name: "index_interactions_on_user_id", using: :btree
 
-  create_table "messages", force: true do |t|
-    t.text "body"
-  end
-
-  create_table "portals", force: true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "timezone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "request_states", force: true do |t|
-    t.integer  "request_id"
+  create_table "issue_states", force: true do |t|
+    t.integer  "issue_id"
     t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "request_states", ["request_id"], name: "index_request_states_on_request_id", using: :btree
+  add_index "issue_states", ["issue_id"], name: "index_issue_states_on_issue_id", using: :btree
 
-  create_table "requestor_profiles", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "requests", force: true do |t|
-    t.integer  "portal_id"
+  create_table "issues", force: true do |t|
+    t.integer  "tenant_id"
     t.integer  "requestor_id"
     t.integer  "assignee_id"
     t.datetime "due_in"
@@ -70,11 +53,28 @@ ActiveRecord::Schema.define(version: 20141217174541) do
     t.datetime "updated_at"
   end
 
-  add_index "requests", ["portal_id"], name: "index_requests_on_portal_id", using: :btree
+  add_index "issues", ["tenant_id"], name: "index_issues_on_tenant_id", using: :btree
+
+  create_table "messages", force: true do |t|
+    t.text "body"
+  end
+
+  create_table "requestor_profiles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tenants", force: true do |t|
+    t.string   "name"
+    t.string   "subdomain"
+    t.string   "timezone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name",                   default: "", null: false
-    t.integer  "portal_id"
+    t.integer  "tenant_id"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 20141217174541) do
     t.string   "profile_type"
   end
 
-  add_index "users", ["email", "portal_id"], name: "index_users_on_email_and_portal_id", unique: true, using: :btree
+  add_index "users", ["email", "tenant_id"], name: "index_users_on_email_and_tenant_id", unique: true, using: :btree
   add_index "users", ["profile_id"], name: "index_users_on_profile_id", using: :btree
   add_index "users", ["profile_type"], name: "index_users_on_profile_type", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

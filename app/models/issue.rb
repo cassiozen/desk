@@ -1,8 +1,8 @@
-class Request < ActiveRecord::Base
-  belongs_to :portal
+class Issue < ActiveRecord::Base
+  belongs_to :tenant
   belongs_to :requestor, class_name: "RequestorProfile", foreign_key: "requestor_id"
   belongs_to :assignee, class_name: "AssigneeProfile", foreign_key: "assignee_id"
-  has_many :state_changes, class_name: "RequestState"
+  has_many :state_changes, class_name: "IssueState"
   has_many :interactions, dependent: :destroy
   before_create :set_initial_state
 
@@ -10,24 +10,24 @@ class Request < ActiveRecord::Base
   #
   # STATE MACHINE
   #
-  # Requests have a state-machine functionality through a polymorphic assossiation with RequestState
+  # Issues have a state-machine functionality through a polymorphic assossiation with IssueState
   # Not only records current_state but also state changes history
   #
 
   # Possible States
   STATES = %w[open pending closed]
 
-  # Scope-like methods to find all requests on a given state
-  def self.open_requests
-    joins(:state_changes).merge RequestState.with_last_state("open")
+  # Scope-like methods to find all issues on a given state
+  def self.open_issues
+    joins(:state_changes).merge IssueState.with_last_state("open")
   end
 
-  def self.pending_requests
-    joins(:state_changes).merge RequestState.with_last_state("pending")
+  def self.pending_issues
+    joins(:state_changes).merge IssueState.with_last_state("pending")
   end
 
-  def self.closed_requests
-    joins(:state_changes).merge RequestState.with_last_state("closed")
+  def self.closed_issues
+    joins(:state_changes).merge IssueState.with_last_state("closed")
   end
 
   # Get current state (with syntatic-sugar expressions for each possible state)
@@ -37,7 +37,7 @@ class Request < ActiveRecord::Base
     (state_changes.last.try(:state)).inquiry rescue nil
   end
 
-  # Cache request's current state
+  # Cache issue's current state
   def current_state
     Rails.cache.fetch([self, "current_state"]) { fetch_current_state }
   end

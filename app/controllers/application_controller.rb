@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  private
-  def load_portal
-    @portal = Portal.find_by_url!(request.subdomain)
+  def current_tenant
+    Tenant.find_by_subdomain! request.subdomain
   end
+  helper_method :current_tenant
 end

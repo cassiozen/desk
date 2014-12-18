@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :portal
+  belongs_to :tenant
   belongs_to :profile, polymorphic: true, dependent: :destroy
   has_many :interactions
 
@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, request_keys: [:subdomain]
 
-  # Overriding Devise find auth method to include the portal_id additional query parameters
+  # Overriding Devise find auth method to include the tenant_id additional query parameters
   def self.find_for_authentication(warden_conditions)
-    portal = Portal.find_by_url!(warden_conditions[:subdomain]) rescue nil
-    where(:email => warden_conditions[:email], :portal_id => portal.id).first
+    tenant = Tenant.find_by_url!(warden_conditions[:subdomain]) rescue nil
+    where(:email => warden_conditions[:email], :tenant_id => tenant.id).first
   end
 end

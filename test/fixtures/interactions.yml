@@ -1,96 +1,96 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-req1_inter_1:
-  request: one
+issue_1_inter_1:
+  issue: one
   user: john
   interacteable: message_1 (Message)
 
-req1_inter_2:
-  request: one
+issue_1_inter_2:
+  issue: one
   user: anna
   interacteable: message_2 (Message)
 
-req1_inter_3:
-  request: one
+issue_1_inter_3:
+  issue: one
   user: anna
-  interacteable: state_change_2 (RequestState)
+  interacteable: state_change_2 (IssueState)
 
-req1_inter_4:
-  request: one
+issue_1_inter_4:
+  issue: one
   user: anna
   interacteable: message_3 (Message)
 
-req1_inter_5:
-  request: one
+issue_1_inter_5:
+  issue: one
   user: anna
-  interacteable: state_change_3 (RequestState)
+  interacteable: state_change_3 (IssueState)
 
-req1_inter_6:
-  request: one
+issue_1_inter_6:
+  issue: one
   user: john
   interacteable: message_4 (Message)
 
-req1_inter_7:
-  request: one
+issue_1_inter_7:
+  issue: one
   user: john
-  interacteable: state_change_4 (RequestState)
+  interacteable: state_change_4 (IssueState)
 
-req1_inter_8:
-  request: one
+issue_1_inter_8:
+  issue: one
   user: anna
   interacteable: message_5 (Message)
 
-req1_inter_9:
-  request: one
+issue_1_inter_9:
+  issue: one
   user: anna
-  interacteable: state_change_5 (RequestState)
+  interacteable: state_change_5 (IssueState)
 
-req2_inter_1:
-  request: two
+issue_2_inter_1:
+  issue: two
   user: john
   interacteable: message_6 (Message)
 
-req2_inter_2:
-  request: two
+issue_2_inter_2:
+  issue: two
   user: george
   interacteable: message_7 (Message)
 
-req2_inter_3:
-  request: two
+issue_2_inter_3:
+  issue: two
   user: george
-  interacteable: state_change_7 (RequestState)
+  interacteable: state_change_7 (IssueState)
 
-req3_inter_1:
-  request: three
+issue_3_inter_1:
+  issue: three
   user: jane
   interacteable: message_8 (Message)
 
-req3_inter_2:
-  request: three
+issue_3_inter_2:
+  issue: three
   user: anna
   interacteable: message_9 (Message)
 
-req3_inter_3:
-  request: three
+issue_3_inter_3:
+  issue: three
   user: anna
-  interacteable: state_change_9 (RequestState)
+  interacteable: state_change_9 (IssueState)
 
-req4_inter_1:
-  request: four
+issue_4_inter_1:
+  issue: four
   user: jane
   interacteable: message_10 (Message)
 
-req5_inter_1:
-  request: five
+issue_5_inter_1:
+  issue: five
   user: jane
   interacteable: message_11 (Message)
 
-req5_inter_2:
-  request: five
+issue_5_inter_2:
+  issue: five
   user: george
   interacteable: message_12 (Message)
 
-req5_inter_3:
-  request: five
+issue_5_inter_3:
+  issue: five
   user: george
-  interacteable: state_change_12 (RequestState)
+  interacteable: state_change_12 (IssueState)

@@ -1,31 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  portal: codify
+  tenant: codify
   requestor: john
   assignee: anna
   due_in: 2014-12-16 17:16:30
 
 two:
-  portal: codify
+  tenant: codify
   requestor: john
   assignee: george
   due_in: 2014-12-16 17:16:30
 
 three:
-  portal: codify
+  tenant: codify
   requestor: jane
   assignee: anna
   due_in: 2014-12-16 17:16:30
 
 four:
-  portal: codify
+  tenant: codify
   requestor: jane
   assignee: george
   due_in: 2014-12-16 17:16:30
 
 five:
-  portal: codify
+  tenant: codify
   requestor: jane
   assignee: george
   due_in: 2014-12-16 17:16:30
