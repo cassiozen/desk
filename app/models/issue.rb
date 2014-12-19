@@ -4,6 +4,7 @@ class Issue < ActiveRecord::Base
   belongs_to :assignee, class_name: "AssigneeProfile", foreign_key: "assignee_id"
   has_many :state_changes, class_name: "IssueState"
   has_many :interactions, dependent: :destroy
+  has_many :messages, :through => :interactions, :source => :interacteable, :source_type => "Message"
   before_create :set_initial_state
   default_scope { where(tenant_id: Tenant.current_id) }
 

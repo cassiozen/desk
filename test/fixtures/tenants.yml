@@ -1,5 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+commit:
+  name: Commit
+  subdomain: commit
+  timezone: America/Sao_Paulo
+
 codify:
   name: Codify
   subdomain: codify

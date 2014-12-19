@@ -27,6 +27,9 @@ gem 'devise'
 # Cancan authorization
 gem 'cancancan', '~> 1.9'
 
+# Unread messages count
+gem 'unread'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
