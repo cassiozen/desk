@@ -1,5 +1,126 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    Welcome to <%= current_tenant.name %>
+  <header id="topnav" class="navbar navbar-default navbar-fixed-top clearfix" role="banner">
+    <a class="navbar-brand" href="index.html">Jeet</a>
+
+    <div class="yamm navbar-left navbar-collapse collapse in">
+      <ul class="nav navbar-nav">
+        <li><a href="frontend/index.html" target="_blank"><strong>Frontend</strong></a></li>
+        <li><a href="landing/index.html" target="_blank"><strong>Landing Page</strong></a></li>
+      </ul>
+    </div>
+
+    <ul class="nav navbar-nav toolbar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+          <span class="hidden-xs">Cássio Zen</span>
+
+          <img class="img-circle" src="https://lh4.googleusercontent.com/-DkCrZbWNfhI/AAAAAAAAAAI/AAAAAAAAAFo/vB1KNRyEla0/s60-c/photo.jpg?sz=50" />
+        </a>
+        <ul class="dropdown-menu userinfo">
+          <li><a href="#"><span class="pull-left">Edit Profile</span> <i class="pull-right fa fa-pencil"></i></a></li>
+          <li><a href="#"><span class="pull-left">Account Settings</span> <i class="pull-right fa fa-cogs"></i></a></li>
+          <li><a href="#"><span class="pull-left">Help</span> <i class="pull-right fa fa-question-circle"></i></a></li>
+          <li class="divider"></li>
+          <li><a href="#"><span class="pull-left">Sign Out</span> <i class="pull-right fa fa-sign-out"></i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+
+  <div class="page-heading">
+    <h1>Dashboard</h1>
+    <div class="options">
+      <div class="btn-toolbar">
+        <a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+      </div>
+    </div>
   </div>
-</div>
+  <!-- <ol class="breadcrumb">
+  <li class="active"><a href="index.html">Home</a></li>
+  </ol> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <a class="info-tiles tiles-inverse has-footer" href="#">
+        <div class="tiles-heading">
+          <div class="pull-left">Overdue</div>
+          <div class="pull-right">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+        <div class="tiles-body">
+          <div class="text-center">15</div>
+        </div>
+        <div class="tiles-footer">
+          <div class="pull-left">see all overdue issues</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a class="info-tiles tiles-green has-footer" href="#">
+        <div class="tiles-heading">
+          <div class="pull-left">Open</div>
+          <div class="pull-right">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+        <div class="tiles-body">
+          <div class="text-center">7</div>
+        </div>
+        <div class="tiles-footer">
+          <div class="pull-left">see all open issues</div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-3">
+      <a class="info-tiles tiles-blue has-footer" href="#">
+        <div class="tiles-heading">
+          <div class="pull-left">On Hold</div>
+          <div class="pull-right">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+        <div class="tiles-body">
+          <div class="text-center">1</div>
+        </div>
+        <div class="tiles-footer">
+          <div class="pull-left">see all pending issues</div>
+          <div class="pull-right percent-change">+10.3%</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a class="info-tiles tiles-midnightblue has-footer" href="#">
+        <div class="tiles-heading">
+          <div class="pull-left">Due Today</div>
+          <div class="pull-right">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+        <div class="tiles-body">
+          <div class="text-center">6</div>
+        </div>
+        <div class="tiles-footer">
+          <div class="pull-left">See all issues due today</div>
+          <div class="pull-right percent-change"><i class="fa fa-comment"> 4</i></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+
+        <div class="panel-heading">
+          <h2>Recent Activity</ha>
+        </div>
+        <div class="panel-body">
+          <p>panel body</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> <!-- .container-fluid -->
