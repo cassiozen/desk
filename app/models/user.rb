@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   belongs_to :tenant
   belongs_to :profile, polymorphic: true, dependent: :destroy
   has_many :interactions
-  default_scope { where(tenant_id: Tenant.current_id) }
+  default_scope { where(tenant_id: Tenant.current_id).includes(:profile) }
 
   # Include default devise modules. Others available are:
   #  :confirmable, :validatable, :lockable, :timeoutable and :omniauthable
