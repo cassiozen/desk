@@ -2,9 +2,10 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    user ||= User.new # guest user (not logged in)
 
     if user.profile_type == "RequestorProfile"
-        can :manage, Issue, :user_id => user.id
+        can :manage, Issue, :requestor_id => user.profile.id
     elsif user.profile_type == "AssigneeProfile"
         can :manage, Issue
     end
