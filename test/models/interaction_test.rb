@@ -2,6 +2,7 @@ require 'test_helper'
 
 class InteractionTest < ActiveSupport::TestCase
   def setup
+    Tenant.current_id = tenants(:codify).id
     @issue = Issue.create({
       tenant: tenants(:codify),
       requestor: requestor_profiles(:john),

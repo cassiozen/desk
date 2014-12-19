@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class IssueTest < ActiveSupport::TestCase
+  def setup
+    Tenant.current_id = tenants(:codify).id
+  end
+
+  def teardown
+    Tenant.current_id = nil
+  end
 
   test "is open after create" do
     issue = Issue.create!

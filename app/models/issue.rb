@@ -5,6 +5,7 @@ class Issue < ActiveRecord::Base
   has_many :state_changes, class_name: "IssueState"
   has_many :interactions, dependent: :destroy
   before_create :set_initial_state
+  default_scope { where(tenant_id: Tenant.current_id) }
 
 
   #
