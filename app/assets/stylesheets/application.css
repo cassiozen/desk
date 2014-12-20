@@ -13,3 +13,29 @@
  *= require avalon
  *= require_self
  */
+.width-wrapper {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.tiles-heading {
+  font-size: 13px !important;
+}
+
+.tiles-body {
+  padding: 8px 20px 7px 20px !important;
+  font-size: 41px !important;
+}
+
+ #topnav.navbar-default .navbar-brand {
+   background: url("jeet-logo.png") no-repeat -35px bottom;
+ }
+ #topnav .navbar-brand {
+   background: url("jeet-logo.png") no-repeat -35px top;
+ }
+ body.topnav-collapsed #topnav.navbar-default .navbar-brand {
+   background: url("jeet-logo.png") no-repeat 0px bottom;
+ }
+ body.topnav-collapsed #topnav .navbar-brand {
+   background: url("jeet-logo.png") no-repeat 0px top;
+ }
