@@ -28,14 +28,14 @@
 }
 
  #topnav.navbar-default .navbar-brand {
-   background: url("jeet-logo.png") no-repeat -35px bottom;
+   background: url("jeet-logo.png") no-repeat;
  }
  #topnav .navbar-brand {
-   background: url("jeet-logo.png") no-repeat -35px top;
+   background: url("jeet-logo.png") no-repeat;
  }
  body.topnav-collapsed #topnav.navbar-default .navbar-brand {
-   background: url("jeet-logo.png") no-repeat 0px bottom;
+   background: url("jeet-logo.png") no-repeat;
  }
  body.topnav-collapsed #topnav .navbar-brand {
-   background: url("jeet-logo.png") no-repeat 0px top;
+   background: url("jeet-logo.png") no-repeat;
  }
