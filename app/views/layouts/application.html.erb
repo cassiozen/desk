@@ -11,8 +11,51 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= flash_messages %>
-<%= yield %>
+<header id="topnav" class="navbar navbar-default navbar-fixed-top clearfix" role="banner">
+  <div class="width-wrapper">
+    <a class="navbar-brand" href="index.html">Jeet</a>
+
+    <div class="navbar-left navbar-collapse collapse in">
+      <ul class="nav navbar-nav hidden-xs">
+        <li><a href="#" target="_blank"><strong>Dashboard</strong></a></li>
+        <li><a href="#" target="_blank">Issues</a></li>
+        <li><a href="#" target="_blank">Users</a></li>
+        <li><a href="#" target="_blank">Admin</a></li>
+      </ul>
+    </div>
+
+    <ul class="nav navbar-nav toolbar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+          <span class="hidden-xs">Cássio Zen</span>
+
+          <img class="img-circle" src="https://lh4.googleusercontent.com/-DkCrZbWNfhI/AAAAAAAAAAI/AAAAAAAAAFo/vB1KNRyEla0/s60-c/photo.jpg?sz=50" />
+        </a>
+        <ul class="dropdown-menu userinfo">
+          <li><a href="#"><span class="pull-left">Edit Profile</span> <i class="pull-right fa fa-pencil"></i></a></li>
+          <li><a href="#"><span class="pull-left">Account Settings</span> <i class="pull-right fa fa-cogs"></i></a></li>
+          <li><a href="#"><span class="pull-left">Help</span> <i class="pull-right fa fa-question-circle"></i></a></li>
+          <li class="divider"></li>
+          <li><a href="#"><span class="pull-left">Sign Out</span> <i class="pull-right fa fa-sign-out"></i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<div id="wrapper">
+  <div class="page-heading">
+    <div class="width-wrapper">
+      <h1><%= yield :heading %></h1>
+      <div class="options">
+        <div class="btn-toolbar">
+          <a href="#" class="btn btn-default">New Request</a>
+        </div>
+      </div>
+    </div> <!-- #width-wrapper -->
+  </div>
+  <%= flash_messages %>
+  <%= yield %>
+</div> <!-- #wrapper -->
 
 </body>
 </html>
