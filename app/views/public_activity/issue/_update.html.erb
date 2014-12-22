@@ -1,0 +1,8 @@
+updated
+<% if activity.trackable %>
+  issue <%= activity.trackable.issue.subject %>
+<% else %>
+  an issue which has since been removed
+<% end %>
+
+

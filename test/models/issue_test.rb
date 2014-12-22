@@ -47,14 +47,22 @@ class IssueTest < ActiveSupport::TestCase
   end
 
   test "should list all open issues" do
-    assert_equal 1, Issue.open_issues.count
+    assert_equal 1, Issue.open.count
   end
 
   test "should list all pending issues" do
-    assert_equal 1, Issue.pending_issues.count
+    assert_equal 1, Issue.pending.count
   end
 
   test "should list all closed issues" do
-    assert_equal 3, Issue.closed_issues.count
+    assert_equal 3, Issue.closed.count
+  end
+
+  test "should list all overdue issues" do
+    assert_equal 2, Issue.overdue.count
+  end
+
+  test "should list all issues for today" do
+    assert_equal 1, Issue.due_today.count
   end
 end

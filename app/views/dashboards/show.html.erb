@@ -1,0 +1,136 @@
+<header id="topnav" class="navbar navbar-default navbar-fixed-top clearfix" role="banner">
+  <div class="width-wrapper">
+    <a class="navbar-brand" href="index.html">Jeet</a>
+
+    <div class="navbar-left navbar-collapse collapse in">
+      <ul class="nav navbar-nav hidden-xs">
+        <li><a href="#" target="_blank"><strong>Dashboard</strong></a></li>
+        <li><a href="#" target="_blank">Issues</a></li>
+        <li><a href="#" target="_blank">Users</a></li>
+        <li><a href="#" target="_blank">Admin</a></li>
+      </ul>
+    </div>
+
+    <ul class="nav navbar-nav toolbar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+          <span class="hidden-xs">Cássio Zen</span>
+
+          <img class="img-circle" src="https://lh4.googleusercontent.com/-DkCrZbWNfhI/AAAAAAAAAAI/AAAAAAAAAFo/vB1KNRyEla0/s60-c/photo.jpg?sz=50" />
+        </a>
+        <ul class="dropdown-menu userinfo">
+          <li><a href="#"><span class="pull-left">Edit Profile</span> <i class="pull-right fa fa-pencil"></i></a></li>
+          <li><a href="#"><span class="pull-left">Account Settings</span> <i class="pull-right fa fa-cogs"></i></a></li>
+          <li><a href="#"><span class="pull-left">Help</span> <i class="pull-right fa fa-question-circle"></i></a></li>
+          <li class="divider"></li>
+          <li><a href="#"><span class="pull-left">Sign Out</span> <i class="pull-right fa fa-sign-out"></i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<div id="wrapper">
+  <div class="page-heading">
+    <div class="width-wrapper">
+      <h1>Dashboard</h1>
+      <div class="options">
+        <div class="btn-toolbar">
+          <a href="#" class="btn btn-default"><i class="fa fa-fw fa-cog"></i></a>
+        </div>
+      </div>
+    </div> <!-- #width-wrapper -->
+  </div>
+  <!-- <ol class="breadcrumb">
+  <li class="active"><a href="index.html">Home</a></li>
+  </ol> -->
+  <div class="container-fluid width-wrapper">
+    <div class="row">
+      <div class="col-md-3">
+        <a class="info-tiles tiles-alizarin has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">Overdue</div>
+            <div class="pull-right">
+              <i class="fa fa-exclamation-triangle"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @overdue %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">see all overdue requests</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="info-tiles tiles-inverse has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">On Hold</div>
+            <div class="pull-right">
+              <i class="fa fa-pause"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @pending %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">see all pending requests</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="info-tiles tiles-blue has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">Open</div>
+            <div class="pull-right">
+              <i class="fa fa-calendar-o"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @open %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">see all open requests</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3">
+        <a class="info-tiles tiles-midnightblue has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">Due Today</div>
+            <div class="pull-right">
+              <i class="fa fa-check-square"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @today %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">See all requests due today</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+
+          <div class="panel-heading">
+            <h2>Recent Activity</ha>
+          </div>
+          <div class="panel-body">
+            <% @activities.each do |activity| %>
+              <div class="activity">
+                <%= activity.owner if activity.owner %>
+                <%= render_activity activity %>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> <!-- .container-fluid -->
+</div> <!-- #wrapper -->

@@ -1,11 +1,16 @@
 class Issue < ActiveRecord::Base
+  include PublicActivity::Model
+  tracked owner: Proc.new{ |controller, model| controller && controller.current_user }
+
   belongs_to :tenant
   belongs_to :requestor, class_name: "RequestorProfile", foreign_key: "requestor_id"
   belongs_to :assignee, class_name: "AssigneeProfile", foreign_key: "assignee_id"
   has_many :state_changes, class_name: "IssueState"
   has_many :interactions, dependent: :destroy
   has_many :messages, :through => :interactions, :source => :interacteable, :source_type => "Message"
+
   before_create :set_initial_state
+
   default_scope { where(tenant_id: Tenant.current_id) }
 
 
@@ -20,17 +25,27 @@ class Issue < ActiveRecord::Base
   STATES = %w[open pending closed]
 
   # Scope-like methods to find all issues on a given state
-  def self.open_issues
+  def self.open
     joins(:state_changes).merge IssueState.with_last_state("open")
   end
 
-  def self.pending_issues
+  def self.pending
     joins(:state_changes).merge IssueState.with_last_state("pending")
   end
 
-  def self.closed_issues
+  def self.closed
     joins(:state_changes).merge IssueState.with_last_state("closed")
   end
+
+  def self.overdue
+    where("due_in < ?", DateTime.now)
+  end
+
+  def self.due_today
+    now = DateTime.now
+    where(:due_in => now..now.end_of_day)
+  end
+
 
   # Get current state (with syntatic-sugar expressions for each possible state)
   delegate :open?, :closed?, :pending?, to: :current_state

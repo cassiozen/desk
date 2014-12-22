@@ -1,0 +1,11 @@
+<% if activity.trackable %>
+  <% if activity.trackable.issue_state.state == "open" %>
+    reopened issue <%= activity.trackable.issue_state.state %>
+  <% elsif activity.trackable.issue_state.state == "pending" %>
+    put on hold issue <%= activity.trackable.issue_state.state %>
+  <% elsif activity.trackable.issue_state.state == "closed" %>
+    closed issue <%= activity.trackable.issue_state.state %>
+  <% end %>
+<% else %>
+  changed an issue which has since been removed
+<% end %>

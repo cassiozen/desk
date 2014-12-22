@@ -4,28 +4,33 @@ one:
   tenant: codify
   requestor: john
   assignee: anna
-  due_in: 2014-12-16 17:16:30
+  subject: Subject One
+  due_in: <%= DateTime.now - 2.days %>
 
 two:
   tenant: codify
   requestor: john
   assignee: george
-  due_in: 2014-12-16 17:16:30
+  subject: Subject Two
+  due_in: <%= DateTime.now.beginning_of_day %>
 
 three:
   tenant: codify
   requestor: jane
   assignee: anna
-  due_in: 2014-12-16 17:16:30
+  subject: Subject Three
+  due_in: <%= DateTime.now.end_of_day %>
 
 four:
   tenant: codify
   requestor: jane
   assignee: george
-  due_in: 2014-12-16 17:16:30
+  subject: Subject Four
+  due_in: <%= DateTime.now + 2.days %>
 
 five:
   tenant: codify
   requestor: jane
   assignee: george
-  due_in: 2014-12-16 17:16:30
+  subject: Subject Five
+  due_in: <%= DateTime.now + 3.days %>

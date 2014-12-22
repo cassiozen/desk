@@ -29,6 +29,8 @@ gem 'cancancan', '~> 1.9'
 
 # Unread messages count
 gem 'unread'
+# Public activity list
+gem 'public_activity'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
