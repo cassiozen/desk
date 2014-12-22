@@ -5,6 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 commit_user:
+  id: 1
   name: Commit User
   tenant: commit
   email: commit@example.com
@@ -12,6 +13,7 @@ commit_user:
   profile: commit (AssigneeProfile)
 
 george:
+  id: 2
   name: George Harisson
   tenant: codify
   email: george@example.com
@@ -19,6 +21,7 @@ george:
   profile: george (AssigneeProfile)
 
 anna:
+  id: 3
   name: Anna Louise
   tenant: codify
   email: anna@example.com
@@ -26,6 +29,7 @@ anna:
   profile: anna (AssigneeProfile)
 
 john:
+  id: 4
   name: John Doe
   tenant: codify
   email: johndoe@example.com
@@ -33,6 +37,7 @@ john:
   profile: john (RequestorProfile)
 
 jane:
+  id: 5
   name: Mary Jane
   tenant: codify
   email: maryjane@example.com

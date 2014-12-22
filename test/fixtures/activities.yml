@@ -1,0 +1,38 @@
+#<PublicActivity::Activity id: 2, trackable_id: 1018350796, trackable_type: "Issue", owner_id: 830138774, owner_type: "User", key: "issue.create", parameters: {}, recipient_id: nil, recipient_type: nil, created_at: "2014-12-22 13:42:26", updated_at: "2014-12-22 13:42:26">,
+#<PublicActivity::Activity id: 3, trackable_id: 13, trackable_type: "IssueState", owner_id: 830138774, owner_type: "User", key: "issue_state.create", parameters: {}, recipient_id: nil, recipient_type: nil, created_at: "2014-12-22 13:42:26", updated_at: "2014-12-22 13:42:26">]>
+#<PublicActivity::Activity id: 4, trackable_id: 1027483094, trackable_type: "Message", owner_id: 830138774, owner_type: "User", key: "message.create", parameters: {}, recipient_id: nil, recipient_type: nil, created_at: "2014-12-22 13:57:13", updated_at: "2014-12-22 13:57:13">
+
+one:
+  trackable_id: 1
+  trackable_type: "Issue"
+  owner_id: users(:john).id
+  owner_type: "User"
+  key: "issue.create"
+
+two:
+  trackable_id: 1
+  trackable_type: "IssueState"
+  owner_id: 4
+  owner_type: "User"
+  key: "issue_state.create"
+
+three:
+  trackable_id: 1
+  trackable_type: "Message"
+  owner_id: 4
+  owner_type: "User"
+  key: "message.create"
+
+four:
+  trackable_id: 2
+  trackable_type: "Message"
+  owner_id: 3
+  owner_type: "User"
+  key: "message.create"
+
+five:
+  trackable_id: 2
+  trackable_type: "IssueState"
+  owner_id: 3
+  owner_type: "User"
+  key: "issue_state.create"

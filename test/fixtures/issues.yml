@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   tenant: codify
   requestor: john
   assignee: anna
@@ -8,6 +9,7 @@ one:
   due_in: <%= DateTime.now - 2.days %>
 
 two:
+  id: 2
   tenant: codify
   requestor: john
   assignee: george
@@ -15,6 +17,7 @@ two:
   due_in: <%= DateTime.now.beginning_of_day %>
 
 three:
+  id: 3
   tenant: codify
   requestor: jane
   assignee: anna
@@ -22,6 +25,7 @@ three:
   due_in: <%= DateTime.now.end_of_day %>
 
 four:
+  id: 4
   tenant: codify
   requestor: jane
   assignee: george
@@ -29,6 +33,7 @@ four:
   due_in: <%= DateTime.now + 2.days %>
 
 five:
+  id: 5
   tenant: codify
   requestor: jane
   assignee: george

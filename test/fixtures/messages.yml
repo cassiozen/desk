@@ -1,37 +1,49 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 message_1:
+  id: 1
   body: "First message from request 1"
 
 message_2:
+  id: 2
   body: "I need more info. I'll put on pending"
 
 message_3:
+  id: 3
   body: "No response, so closing."
 
 message_4:
+  id: 4
   body: "Sorry i'm late. Reopening - here's the info"
 
 message_5:
+  id: 5
   body: "Great. Here's the answer."
 
 message_6:
+  id: 6
   body: "First message from request 2"
 
 message_7:
+  id: 7
   body: "I need more info. I'll put on pending"
 
 message_8:
+  id: 8
   body: "First message from request 3"
 
 message_9:
+  id: 9
   body: "Here's the answer. Closing."
 
 message_10:
+  id: 10
   body: "First message from request 4"
 
 message_11:
+  id: 11
   body: "First message from request 5"
 
 message_12:
+  id: 12
   body: "Here's the answer. Closing."
