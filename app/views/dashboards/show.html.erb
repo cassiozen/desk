@@ -123,7 +123,7 @@
           <div class="panel-body">
             <% @activities.each do |activity| %>
               <div class="activity">
-                <%= activity.owner if activity.owner %>
+                <%= activity.owner.name if activity.owner %>
                 <%= render_activity activity %>
               </div>
             <% end %>

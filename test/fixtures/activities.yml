@@ -5,7 +5,7 @@
 one:
   trackable_id: 1
   trackable_type: "Issue"
-  owner_id: users(:john).id
+  owner_id: 4
   owner_type: "User"
   key: "issue.create"
 

@@ -1,6 +1,6 @@
 commented on
 <% if activity.trackable %>
-  issue <%= activity.trackable.message.interaction.issue.subject %>
+  <%= activity.trackable.interaction.issue.subject %>
 <% else %>
   an issue which has since been removed
 <% end %>
