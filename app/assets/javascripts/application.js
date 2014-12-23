@@ -12,5 +12,6 @@
 //
 //= require jquery_ujs
 //= require bootstrap
-//= require vue
+//= require polyfills
+//= require jquery.pjax
 //= require_tree .

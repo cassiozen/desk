@@ -3,9 +3,15 @@ class HomeController < ApplicationController
 
   def index
     # No subdomain
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
   end
 
   def show
     # subdomain specific
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
   end
 end
