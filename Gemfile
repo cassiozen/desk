@@ -26,11 +26,13 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 # Cancan authorization
 gem 'cancancan', '~> 1.9'
-
 # Unread messages count
 gem 'unread'
 # Public activity list
 gem 'public_activity'
+# File Upload
+gem 'carrierwave'
+
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
