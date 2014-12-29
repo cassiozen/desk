@@ -1,97 +1,98 @@
 <% content_for :heading do %>
   Dashboard
 <% end %>
-
-<!-- <ol class="breadcrumb">
-<li class="active"><a href="index.html">Home</a></li>
-</ol> -->
-<div class="container-fluid width-wrapper">
-  <div class="row">
-    <div class="col-md-3">
-      <a class="info-tiles tiles-alizarin has-footer" href="#">
-        <div class="tiles-heading">
-          <div class="pull-left">Overdue</div>
-          <div class="pull-right">
-            <i class="fa fa-exclamation-triangle"></i>
-          </div>
-        </div>
-        <div class="tiles-body">
-          <div class="text-center"><%= @overdue %></div>
-        </div>
-        <div class="tiles-footer">
-          <div class="text-center">see all overdue requests</div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a class="info-tiles tiles-inverse has-footer" href="#">
-        <div class="tiles-heading">
-          <div class="pull-left">On Hold</div>
-          <div class="pull-right">
-            <i class="fa fa-pause"></i>
-          </div>
-        </div>
-        <div class="tiles-body">
-          <div class="text-center"><%= @pending %></div>
-        </div>
-        <div class="tiles-footer">
-          <div class="text-center">see all pending requests</div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a class="info-tiles tiles-blue has-footer" href="#">
-        <div class="tiles-heading">
-          <div class="pull-left">Open</div>
-          <div class="pull-right">
-            <i class="fa fa-calendar-o"></i>
-          </div>
-        </div>
-        <div class="tiles-body">
-          <div class="text-center"><%= @open %></div>
-        </div>
-        <div class="tiles-footer">
-          <div class="text-center">see all open requests</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-md-3">
-      <a class="info-tiles tiles-midnightblue has-footer" href="#">
-        <div class="tiles-heading">
-          <div class="pull-left">Due Today</div>
-          <div class="pull-right">
-            <i class="fa fa-check-square"></i>
-          </div>
-        </div>
-        <div class="tiles-body">
-          <div class="text-center"><%= @today %></div>
-        </div>
-        <div class="tiles-footer">
-          <div class="text-center">See all requests due today</div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default">
-
-        <div class="panel-heading">
-          <h2>Recent Activity</ha>
-        </div>
-        <div class="panel-body">
-          <% @activities.each do |activity| %>
-            <div class="activity">
-              <%= activity.owner.name if activity.owner %>
-              <%= render_activity activity %>
+<section id="dashboard">
+  <!-- <ol class="breadcrumb">
+  <li class="active"><a href="index.html">Home</a></li>
+  </ol> -->
+  <div class="container-fluid width-wrapper">
+    <div class="row">
+      <div class="col-md-3">
+        <a class="info-tiles tiles-alizarin has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">Overdue</div>
+            <div class="pull-right">
+              <i class="fa fa-exclamation-triangle"></i>
             </div>
-          <% end %>
-        </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @overdue %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">see all overdue requests</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="info-tiles tiles-inverse has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">On Hold</div>
+            <div class="pull-right">
+              <i class="fa fa-pause"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @pending %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">see all pending requests</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a class="info-tiles tiles-blue has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">Open</div>
+            <div class="pull-right">
+              <i class="fa fa-calendar-o"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @open %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">see all open requests</div>
+          </div>
+        </a>
+      </div>
 
+      <div class="col-md-3">
+        <a class="info-tiles tiles-midnightblue has-footer" href="#">
+          <div class="tiles-heading">
+            <div class="pull-left">Due Today</div>
+            <div class="pull-right">
+              <i class="fa fa-check-square"></i>
+            </div>
+          </div>
+          <div class="tiles-body">
+            <div class="text-center"><%= @today %></div>
+          </div>
+          <div class="tiles-footer">
+            <div class="text-center">See all requests due today</div>
+          </div>
+        </a>
       </div>
     </div>
-  </div>
-</div> <!-- .container-fluid -->
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+
+          <div class="panel-heading">
+            <h2>Recent Activity</ha>
+          </div>
+          <div class="panel-body">
+            <% @activities.each do |activity| %>
+              <div class="activity">
+                <%= activity.owner.name if activity.owner %>
+                <%= render_activity activity %>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> <!-- .container-fluid -->
+</section> <!-- #dashboard -->

@@ -1,3 +1,17 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+Section = require("Section")
+
+class Dashboard extends Section
+  constructor: (app) ->
+    super "dashboard", app
+
+  setup: ->
+    super()
+
+  activate: ->
+    super()
+    console.log("Dashboard")
+
+  deactivate: ->
+    super()
+
+module.exports = Dashboard

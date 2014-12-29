@@ -1,3 +1,17 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+Section = require("Section")
+
+class Home extends Section
+  constructor: (app) ->
+    super "home", app, "/"
+
+  setup: ->
+    super()
+
+  activate: ->
+    super()
+    console.log("Home")
+
+  deactivate: ->
+    super()
+
+module.exports = Home
