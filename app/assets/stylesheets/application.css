@@ -12,6 +12,7 @@
  *
  *= require avalon
  *= require_self
+ *= require_tree .
  */
 .width-wrapper {
   max-width: 1120px;
@@ -27,7 +28,23 @@
   font-size: 41px !important;
 }
 
- #topnav.navbar-default .navbar-brand {
+.text-alizarin{
+  color:#e36d4f;
+}
+.text-inverse{
+  color:#95a5a6;
+}
+.text-blue{
+  color:#5394c9;
+}
+.text-midnightblue{
+  color:#34495e;
+}
+.text-green{
+   color:#37bf8d;
+ }
+
+#topnav.navbar-default .navbar-brand {
    background: url("jeet-logo.png") no-repeat;
  }
  #topnav .navbar-brand {

@@ -21,7 +21,6 @@ class Dashboard extends Base.ViewController
 
   activate: ->
     super()
-    $("#heading").text utils.humanize(@name)
     @log("Dashboard")
 
   deactivate: ->

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   match '', to: 'home#show', via: [:get, :post, :put, :patch, :delete], constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }
   resource :dashboard
-  resources :issues, defaults: {format: :json}, only: [:index]
+  resources :issues, only: [:index], path: :requests
 
   root 'home#index'
 end

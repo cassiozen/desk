@@ -1,0 +1,34 @@
+#issues{
+  .panel-body {
+    padding: 0 !important;
+  }
+
+  .state {
+    font-size: 30px;
+    padding-top: 4px;
+  }
+
+  .fa-comment {
+    font-size: 16px;
+    padding-top: 12px;
+    white-space: nowrap;
+  }
+  label {
+    margin-bottom: 0 !important;
+  }
+  td {
+    padding: 15px;
+  }
+
+
+}
+
+.issue-subject {
+  font-weight: bold;
+  font-size: 15px;
+}
+.issue-meta {
+  font-weight: normal;
+  font-size: 12px;
+  color: #999;
+}

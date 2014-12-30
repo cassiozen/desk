@@ -1,18 +1,18 @@
 Base = require("Base")
 utils = require("utils")
 
-class Home extends Base.ViewController
+class Issues extends Base.ViewController
   constructor: ->
-    super "home", "/"
+    super "issues", "/requests"
 
   setup: ->
     super()
 
   activate: ->
     super()
-    @log("Home")
+    @log("Issues")
 
   deactivate: ->
     super()
 
-module.exports = Home
+module.exports = Issues

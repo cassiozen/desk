@@ -1,10 +1,10 @@
 <%= render partial: "shared/heading", locals: {title: "Dashboard", buttons: ["new_request"]} %>
 <%= flash_messages %>
-<section id="dashboard">
+<section id="dashboard" class="width-wrapper">
   <!-- <ol class="breadcrumb">
   <li class="active"><a href="index.html">Home</a></li>
   </ol> -->
-  <div class="container-fluid width-wrapper">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-3">
         <a class="info-tiles tiles-alizarin has-footer" href="#">
@@ -60,7 +60,7 @@
           <div class="tiles-heading">
             <div class="pull-left">Due Today</div>
             <div class="pull-right">
-              <i class="fa fa-check-square"></i>
+              <i class="fa fa-clock-o"></i>
             </div>
           </div>
           <div class="tiles-body">

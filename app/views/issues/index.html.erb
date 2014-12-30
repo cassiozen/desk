@@ -1,0 +1,54 @@
+<%= render partial: "shared/heading", locals: {title: "Requests"} %>
+<%= flash_messages %>
+<section id="issues" class="width-wrapper">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <% if current_user.profile_type == "AssigneeProfile" %>
+          <div class="pull-left">
+            <label for="assigned_to_me">Only assigned to me</label>
+            <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-default btn-xs">
+            <input autocomplete="off" name="assigned_to_me" type="radio" value="1"> Yes
+            </label>
+            <label class="btn btn-default btn-xs active">
+            <input autocomplete="off" checked="checked" name="assigned_to_me" type="radio" value="0"> No
+            </label>
+            </div>
+          </div>
+        <% end %>
+        &nbsp;&nbsp;&nbsp;
+        <a href="#" class="selected">All</a> &nbsp;
+        <a href="#"><i class="fa fa-exclamation-triangle"> Overdue</i></a> &nbsp;
+        <a href="#"><i class="fa fa-pause"> On Hold</i></a> &nbsp;
+        <a href="#"><i class="fa fa-calendar-o"> Open</i></a> &nbsp;
+        <a href="#"><i class="fa fa-clock-o"> Due Today</i></a> &nbsp;
+        <a href="#"><i class="fa fa-check-circle-o"> Closed</i></a> &nbsp;
+    </div>
+    <div class="panel-body">
+
+    <!-- Table -->
+    <table class="table table-hover">
+      <% @issues.each do |issue| %>
+      <tr>
+        <td>
+          <%= issue_fa_icon(issue.current_state) %>
+        </td>
+        <td width="100%">
+          <div class="issue-subject"><%= issue.subject %></div>
+          <div class="issue-meta">
+            <% if issue.assignee %>
+              Assigned to <%= issue.assignee.user.name %>,
+            <% end %>
+            <%= humanized_due_date(issue.due_in) %>
+          </div>
+        </td>
+        <% unread = issue.messages.unread_by(current_user).count %>
+        <td class="<%= 'text-muted' if unread == 0 %>">
+          <i class="fa fa-comment"> <%= unread %></i>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+    </div>
+  </div>
+</section>
