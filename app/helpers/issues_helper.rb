@@ -1,14 +1,11 @@
 module IssuesHelper
-  def issue_fa_icon(state, date)
-    color = ""
-    if date.today?
-      color = 'midnightgreen'
-    elsif date > DateTime.now
-      color = 'green'
-    elsif date < DateTime.now
-      color = 'alizarin'
-    end
-    state_icons = {"pending" => "<i class='text-warning state fa fa-pause'></i>".html_safe, "open" => "<i class='text-#{color} state fa fa-exclamation-triangle'></i>".html_safe, "closed" => "<i class='text-inverse state fa fa-check-circle-o'></i>".html_safe}
+  def issue_fa_icon(state)
+    state_icons = {"pending" => "<i class='text-warning state fa fa-pause'></i>".html_safe, "open" => "<i class='text-green state fa fa-exclamation-circle'></i>".html_safe, "closed" => "<i class='text-alizarin state fa fa-check-circle-o'></i>".html_safe}
+    state_icons[state]
+  end
+
+  def issue_fa_button(state)
+    state_icons = {"pending" => "<div class='btn btn-warning pull-left'><i class='fa fa-pause'> On Hold</i></div>".html_safe, "open" => "<div class='btn btn-green pull-left'><i class='fa fa-exclamation-circle'> Open</i></div>".html_safe, "closed" => "<div class='btn btn-alizarin pull-left'><i class='fa fa-check-circle-o'> Closed</i></div>".html_safe}
     state_icons[state]
   end
 

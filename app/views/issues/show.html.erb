@@ -1,0 +1,63 @@
+<%= render partial: "shared/heading", locals: {title: "Requests"} %>
+<%= flash_messages %>
+<section id="issue" class="width-wrapper">
+  <ol class="breadcrumb">
+  <li>Requests</li>
+  <li class="active"><%= @issue.subject %></li>
+  </ol>
+  <br>
+  <%= issue_fa_button(@issue.current_state) %>
+    <h3> &nbsp;&nbsp;<%= @issue.subject %></h3><br/>
+    <div class="interaction-list">
+      <div class="interaction-timeline">
+
+        <div class="container-fluid">
+          <% @issue.interactions.each do |interaction| %>
+            <% if interaction.interacteable_type == "Message" %>
+              <div class="row">
+                <div class="col-md-1"><%= image_tag interaction.user.picture, class: "img-rounded" %></div>
+                <div class="col-md-11 panel-message">
+                  <div class="panel panel-default">
+                    <div class="panel-heading panel-heading-pointer"><strong><%= interaction.user.name %></strong> commented <%= time_ago_in_words interaction.created_at %></div>
+                    <div class="panel-body"><%= interaction.interacteable.body.html_safe %></div>
+                  </div>
+                </div>
+              </div>
+            <% elsif interaction.interacteable_type == "IssueState" %>
+              <div class="interaction-state">
+                <div class="<%= interaction.interacteable.state %>-icon"> </div>
+                &nbsp;&nbsp;<strong><%= interaction.user.name %></strong>
+                <%= "reopened" if interaction.interacteable.state == "open"  %>
+                <%= "put on hold" if interaction.interacteable.state == "pending"  %>
+                <%= "closed" if interaction.interacteable.state == "closed"  %>
+                <%= time_ago_in_words interaction.created_at %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="closed-banner"></div>
+      <div class="container-fluid row message-reply">
+        <div class="col-md-1"><%= image_tag current_user.picture, class: "img-rounded" %></div>
+        <div class="col-md-11 panel-message">
+          <div class="panel panel-default">
+            <div class="panel-heading panel-heading-pointer">Comment:</div>
+            <div class="panel-body">
+              <form role="form" id="comment-form">
+                  <!-- <div v-component="richText" editorid="message" v-ref="message"></div> -->
+                  <textarea></textarea>
+                  <button id="send" class="btn btn-success">Comment</button>
+                  <% if @issue.open? %>
+                  <button  id="close" class="btn btn-default">Comment and close request</button>
+                  <% else %>
+                  <button id="reopen" class="btn btn-default">Comment and reopen request</button>
+                  <% end %>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="issue-actions">
+    </aside>
+</section>

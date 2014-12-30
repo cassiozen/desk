@@ -2,114 +2,115 @@
 
 issue_1_inter_1:
   issue_id: 1
-  user: john
+  user_id: 4
   interacteable_id: 1
   interacteable_type: "Message"
 
 issue_1_inter_2:
   issue_id: 1
-  user: anna
+  user_id: 3
   interacteable_id: 2
   interacteable_type: "Message"
 
 issue_1_inter_3:
   issue_id: 1
-  user: anna
+  user_id: 3
   interacteable_id: 2
   interacteable_type: "IssueState"
 
 
 issue_1_inter_4:
   issue_id: 1
-  user: anna
+  user_id: 3
   interacteable_id: 3
   interacteable_type: "Message"
 
 issue_1_inter_5:
   issue_id: 1
-  user: anna
+  user_id: 3
   interacteable_id: 3
   interacteable_type: "IssueState"
 
 issue_1_inter_6:
   issue_id: 1
-  user: john
+  user_id: 4
   interacteable_id: 4
   interacteable_type: "Message"
 
 issue_1_inter_7:
   issue_id: 1
-  user: john
+  user_id: 4
   interacteable_id: 4
   interacteable_type: "IssueState"
 
 issue_1_inter_8:
   issue_id: 1
-  user: anna
+  user_id: 3
   interacteable_id: 5
   interacteable_type: "Message"
 
 issue_1_inter_9:
   issue_id: 1
-  user: anna
+  user_id: 3
   interacteable_id: 5
   interacteable_type: "IssueState"
 
 issue_2_inter_1:
   issue_id: 2
-  user: john
+  user_id: 4
   interacteable_id: 6
   interacteable_type: "Message"
 
 issue_2_inter_2:
   issue_id: 2
-  user: george
+  user_id: 2
   interacteable_id: 7
   interacteable_type: "Message"
 
 issue_2_inter_3:
   issue_id: 2
-  user: george
+  user_id: 2
   interacteable_id: 7
   interacteable_type: "IssueState"
 
 issue_3_inter_1:
   issue_id: 3
-  user: jane
+  user_id: 5
   interacteable_id: 8
   interacteable_type: "Message"
 
 issue_3_inter_2:
   issue_id: 3
-  user: anna
+  user_id: 3
   interacteable_id: 9
   interacteable_type: "Message"
 
 issue_3_inter_3:
   issue_id: 3
-  user: anna
+  user_id: 3
   interacteable_id: 9
   interacteable_type: "IssueState"
 
 issue_4_inter_1:
   issue_id: 4
+  user_id: 5
   interacteable_id: 10
   interacteable_type: "Message"
 
 issue_5_inter_1:
   issue_id: 5
-  user: jane
+  user_id: 5
   interacteable_id: 11
   interacteable_type: "Message"
 
 issue_5_inter_2:
   issue_id: 5
-  user: george
+  user_id: 2
   interacteable_id: 12
   interacteable_type: "Message"
 
 issue_5_inter_3:
   issue_id: 5
-  user: george
+  user_id: 2
   interacteable_id: 12
   interacteable_type: "IssueState"

@@ -9,4 +9,10 @@ class IssuesController < ApplicationController
       render :layout => false
     end
   end
+
+  def show
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
+  end
 end

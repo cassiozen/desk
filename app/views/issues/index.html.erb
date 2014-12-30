@@ -18,7 +18,7 @@
         <% end %>
         &nbsp;&nbsp;&nbsp;
         <a href="#" class="selected">All</a> &nbsp;
-        <a href="#"><i class="fa fa-exclamation-triangle"> Overdue</i></a> &nbsp;
+        <a href="#"><i class="fa fa-exclamation-circle"> Overdue</i></a> &nbsp;
         <a href="#"><i class="fa fa-pause"> On Hold</i></a> &nbsp;
         <a href="#"><i class="fa fa-calendar-o"> Open</i></a> &nbsp;
         <a href="#"><i class="fa fa-clock-o"> Due Today</i></a> &nbsp;
@@ -31,10 +31,10 @@
       <% @issues.each do |issue| %>
       <tr>
         <td>
-          <%= issue_fa_icon(issue.current_state, issue.due_in) %>
+          <%= issue_fa_icon(issue.current_state) %>
         </td>
         <td width="100%">
-          <div class="issue-subject"><%= issue.subject %></div>
+          <div class="issue-subject"><%= link_to issue.subject, issue %></div>
           <div class="issue-meta">
             <% if issue.assignee %>
               Assigned to <%= issue.assignee.user.name %>,

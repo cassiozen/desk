@@ -5,6 +5,9 @@
 # below each fixture, per the syntax in the comments below
 #
 #
-commit_user: {}
-anna: {}
-george: {}
+commit_user:
+  id: 1
+anna:
+  id: 2
+george:
+  id: 3

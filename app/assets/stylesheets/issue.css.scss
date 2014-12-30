@@ -1,0 +1,118 @@
+
+.panel-message {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.panel-heading-pointer:before{
+  position: absolute;
+  top: 11px;
+  left: -15px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  display: block;
+  content: " ";
+  border-color: transparent;
+  border-style: solid solid outset;
+  border-right-color: #CED2D6;
+  border-width: 8px;
+}
+.panel-heading-pointer:after{
+  position: absolute;
+  top: 11px;
+  left: -15px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  display: block;
+  content: " ";
+  border-color: transparent;
+  border-style: solid solid outset;
+  border-width: 7px;
+  border-right-color: #ededed;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+
+
+.interaction-list {
+  float: left;
+  width: 85%;
+}
+
+.interaction-timeline {
+  position: relative;
+}
+
+.interaction-timeline:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 114px;
+  width: 2px;
+  background-color: #dadfe3;
+  z-index: -1;
+}
+
+.interaction-state{
+  line-height: 32px;
+  margin: 0 2px 18px 89px;
+  .closed-icon {
+    float: left;
+    line-height: 33px;
+    font-size: 38px;
+    text-align: center;
+    font-family: 'FontAwesome';
+    color: #D95945;
+    background-color: #fbfcfd;
+    &:before { content: "\f058"; }
+  }
+  .open-icon {
+    float: left;
+    line-height: 33px;
+    font-size: 38px;
+    text-align: center;
+    font-family: 'FontAwesome';
+    color: #87B400;
+    background-color: #fbfcfd;
+    &:before { content: "\f06a"; }
+  }
+  .pending-icon {
+    float: left;
+    line-height: 33px;
+    font-size: 38px;
+    text-align: center;
+    font-family: 'FontAwesome';
+    color: #b18816;
+    background-color: #fbfcfd;
+    &:before { content: "\f04c"; }
+  }
+}
+
+.closed-banner {
+  position: relative;
+  margin: 0 0 -15px;
+  height: 19px;
+  overflow: visible;
+  background: #dadfe3;
+  border-radius: 0;
+  border-bottom: 15px solid #fbfcfd;
+}
+
+.message-reply {
+  margin-top: 15px;
+}
+.issue-actions {
+  float: left;
+  width: 15%;
+  padding: 5px 5px 0 10px;
+  font-size: 0.9em;
+  color: #999;
+  strong {
+    color: #777;
+  }
+}

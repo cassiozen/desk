@@ -3,39 +3,39 @@
 one:
   id: 1
   tenant: codify
-  requestor: john
-  assignee: anna
+  requestor_id: 4
+  assignee_id: 3
   subject: Subject One
   due_in: <%= DateTime.now - 2.days %>
 
 two:
   id: 2
   tenant: codify
-  requestor: john
-  assignee: george
+  requestor_id: 4
+  assignee_id: 2
   subject: Subject Two
   due_in: <%= DateTime.now.beginning_of_day %>
 
 three:
   id: 3
   tenant: codify
-  requestor: jane
-  assignee: anna
+  requestor_id: 5
+  assignee_id: 3
   subject: Subject Three
   due_in: <%= DateTime.now.end_of_day %>
 
 four:
   id: 4
   tenant: codify
-  requestor: jane
-  assignee: george
+  requestor_id: 5
+  assignee_id: 2
   subject: Subject Four
   due_in: <%= DateTime.now + 2.days %>
 
 five:
   id: 5
   tenant: codify
-  requestor: jane
-  assignee: george
+  requestor_id: 5
+  assignee_id: 2
   subject: Subject Five
   due_in: <%= DateTime.now + 3.days %>
