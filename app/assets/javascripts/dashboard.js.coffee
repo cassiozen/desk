@@ -1,17 +1,31 @@
-Section = require("Section")
+Base = require("Base")
+utils = require("utils")
 
-class Dashboard extends Section
-  constructor: (app) ->
-    super "dashboard", app
+class Dashboard extends Base.ViewController
+  elements:
+    ".tiles-alizarin .tiles-body .text-center": "overdue"
+
+  events:
+    "click .tiles-alizarin": "click"
+
+  constructor: ->
+    super "dashboard"
+
+  click: (event) ->
+    @log("Clicked first box")
+    @overdue.text(10)
+    event.preventDefault()
 
   setup: ->
     super()
 
   activate: ->
     super()
-    console.log("Dashboard")
+    $("#heading").text utils.humanize(@name)
+    @log("Dashboard")
 
   deactivate: ->
     super()
+    @log("deactivate")
 
 module.exports = Dashboard

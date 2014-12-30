@@ -1,15 +1,17 @@
-Section = require("Section")
+Base = require("Base")
+utils = require("utils")
 
-class Home extends Section
-  constructor: (app) ->
-    super "home", app, "/"
+class Home extends Base.ViewController
+  constructor: ->
+    super "home", "/"
 
   setup: ->
     super()
 
   activate: ->
     super()
-    console.log("Home")
+    $("#heading").text utils.humanize(@name)
+    @log("Home")
 
   deactivate: ->
     super()
