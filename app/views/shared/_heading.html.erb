@@ -1,0 +1,12 @@
+<div class="page-heading">
+  <div class="width-wrapper">
+    <h1><%= title %></h1>
+    <div class="options">
+      <div class="btn-toolbar">
+        <% if defined?(buttons) and buttons.include?("new_request")  %>
+          <a href="#" class="btn btn-default">New Request</a>
+        <% end %>
+      </div>
+    </div>
+  </div> <!-- #width-wrapper -->
+</div>

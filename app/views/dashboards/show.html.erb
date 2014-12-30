@@ -1,6 +1,5 @@
-<% content_for :heading do %>
-  Dashboard
-<% end %>
+<%= render partial: "shared/heading", locals: {title: "Dashboard", buttons: ["new_request"]} %>
+<%= flash_messages %>
 <section id="dashboard">
   <!-- <ol class="breadcrumb">
   <li class="active"><a href="index.html">Home</a></li>
