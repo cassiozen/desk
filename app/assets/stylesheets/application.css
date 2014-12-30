@@ -10,7 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require avalon
+ *= require avalon2
  *= require_self
  *= require_tree .
  */
@@ -29,19 +29,17 @@
 }
 
 .text-alizarin{
-  color:#e36d4f;
+  color:#D95945;
 }
 .text-inverse{
   color:#95a5a6;
 }
-.text-blue{
-  color:#5394c9;
-}
-.text-midnightblue{
-  color:#34495e;
+
+.text-midnightgreen{
+  color:#345E36;
 }
 .text-green{
-   color:#9EBE00;
+   color:#87B400;
  }
 
 #topnav.navbar-default .navbar-brand {

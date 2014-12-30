@@ -1,4 +1,4 @@
-<%= render partial: "shared/heading", locals: {title: "Dashboard", buttons: ["new_request"]} %>
+<%= render partial: "shared/heading", locals: {title: "Dashboard"} %>
 <%= flash_messages %>
 <section id="dashboard" class="width-wrapper">
   <!-- <ol class="breadcrumb">
@@ -9,10 +9,7 @@
       <div class="col-md-3">
         <a class="info-tiles tiles-alizarin has-footer" href="#">
           <div class="tiles-heading">
-            <div class="pull-left">Overdue</div>
-            <div class="pull-right">
-              <i class="fa fa-exclamation-triangle"></i>
-            </div>
+            Overdue
           </div>
           <div class="tiles-body">
             <div class="text-center"><%= @overdue %></div>
@@ -23,12 +20,9 @@
         </a>
       </div>
       <div class="col-md-3">
-        <a class="info-tiles tiles-inverse has-footer" href="#">
+        <a class="info-tiles tiles-warning has-footer" href="#">
           <div class="tiles-heading">
-            <div class="pull-left">On Hold</div>
-            <div class="pull-right">
-              <i class="fa fa-pause"></i>
-            </div>
+            On Hold
           </div>
           <div class="tiles-body">
             <div class="text-center"><%= @pending %></div>
@@ -39,12 +33,9 @@
         </a>
       </div>
       <div class="col-md-3">
-        <a class="info-tiles tiles-blue has-footer" href="#">
+        <a class="info-tiles tiles-green has-footer" href="#">
           <div class="tiles-heading">
-            <div class="pull-left">Open</div>
-            <div class="pull-right">
-              <i class="fa fa-clock-o"></i>
-            </div>
+            Open
           </div>
           <div class="tiles-body">
             <div class="text-center"><%= @open %></div>
@@ -56,12 +47,9 @@
       </div>
 
       <div class="col-md-3">
-        <a class="info-tiles tiles-midnightblue has-footer" href="#">
+        <a class="info-tiles tiles-midnightgreen has-footer" href="#">
           <div class="tiles-heading">
-            <div class="pull-left">Due Today</div>
-            <div class="pull-right">
-              <i class="fa fa-calendar-o"></i>
-            </div>
+            Due Today
           </div>
           <div class="tiles-body">
             <div class="text-center"><%= @today %></div>

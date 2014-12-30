@@ -1,4 +1,4 @@
-<%= render partial: "shared/heading", locals: {title: "Requests"} %>
+<%= render partial: "shared/heading", locals: {title: "Requests", buttons: ["new_request"]} %>
 <%= flash_messages %>
 <section id="issues" class="width-wrapper">
   <div class="panel panel-default">
@@ -31,7 +31,7 @@
       <% @issues.each do |issue| %>
       <tr>
         <td>
-          <%= issue_fa_icon(issue.current_state) %>
+          <%= issue_fa_icon(issue.current_state, issue.due_in) %>
         </td>
         <td width="100%">
           <div class="issue-subject"><%= issue.subject %></div>
