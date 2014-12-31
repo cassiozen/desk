@@ -18,7 +18,7 @@
                 <div class="col-md-1"><%= image_tag interaction.user.picture, class: "img-rounded" %></div>
                 <div class="col-md-11 panel-message">
                   <div class="panel panel-default">
-                    <div class="panel-heading panel-heading-pointer"><strong><%= interaction.user.name %></strong> commented <%= time_ago_in_words interaction.created_at %></div>
+                    <div class="panel-heading panel-heading-pointer"><strong><%= interaction.user.name %></strong> commented <%= time_ago_in_words interaction.created_at %> ago</div>
                     <div class="panel-body"><%= interaction.interacteable.body.html_safe %></div>
                   </div>
                 </div>
@@ -30,7 +30,7 @@
                 <%= "reopened" if interaction.interacteable.state == "open"  %>
                 <%= "put on hold" if interaction.interacteable.state == "pending"  %>
                 <%= "closed" if interaction.interacteable.state == "closed"  %>
-                <%= time_ago_in_words interaction.created_at %>
+                <%= time_ago_in_words interaction.created_at %> ago
               </div>
             <% end %>
           <% end %>

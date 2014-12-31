@@ -15,7 +15,7 @@
   content: " ";
   border-color: transparent;
   border-style: solid solid outset;
-  border-right-color: #CED2D6;
+  border-right-color: #C4C8CC;
   border-width: 8px;
 }
 .panel-heading-pointer:after{
@@ -30,7 +30,7 @@
   border-color: transparent;
   border-style: solid solid outset;
   border-width: 7px;
-  border-right-color: #ededed;
+  border-right-color: #e0e0e0;
   margin-top: 1px;
   margin-left: 2px;
 }
@@ -68,7 +68,7 @@
     text-align: center;
     font-family: 'FontAwesome';
     color: #D95945;
-    background-color: #fbfcfd;
+    background-color: #e9eaed;
     &:before { content: "\f058"; }
   }
   .open-icon {
@@ -78,7 +78,7 @@
     text-align: center;
     font-family: 'FontAwesome';
     color: #87B400;
-    background-color: #fbfcfd;
+    background-color: #e9eaed;
     &:before { content: "\f06a"; }
   }
   .pending-icon {
@@ -88,7 +88,7 @@
     text-align: center;
     font-family: 'FontAwesome';
     color: #b18816;
-    background-color: #fbfcfd;
+    background-color: #e9eaed;
     &:before { content: "\f04c"; }
   }
 }
@@ -100,7 +100,7 @@
   overflow: visible;
   background: #dadfe3;
   border-radius: 0;
-  border-bottom: 15px solid #fbfcfd;
+  border-bottom: 15px solid #e9eaed;
 }
 
 .message-reply {
