@@ -1,0 +1,33 @@
+<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+  <div class="btn-group btn-group-sm">
+    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Tamanho"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+      <ul class="dropdown-menu">
+      <li><a data-edit="fontSize 5"><font size="5">Big</font></a></li>
+      <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+      <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+      </ul>
+  </div>
+  <div class="btn-group btn-group-sm">
+    <a class="btn btn-default" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+    <a class="btn btn-default" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+    <a class="btn btn-default" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+  </div>
+  <div class="btn-group btn-group-sm">
+    <a class="btn btn-default" data-edit="insertunorderedlist" title="List"><i class="fa fa-list-ul"></i></a>
+    <a class="btn btn-default" data-edit="insertorderedlist" title="Ordered List"><i class="fa fa-list-ol"></i></span></a>
+  </div>
+ <div class="dropdown btn-group btn-group-sm">
+   <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Insert Link"><i class="fa fa-link"></i></a>
+   <div class="dropdown-menu input-append">
+     <input class="span2" placeholder="URL" type="text" data-edit="createLink"/>
+     <button class="btn btn-default btn-sm" type="button">OK</button>
+   </div>
+ </div>
+  <div class="btn-group btn-group-sm">
+    <a class="btn btn-default" title="Insert image (or drag'n drop)" id="editorpictureBtn"><i class="fa fa-picture-o"></i></a>
+    <input type="file" data-role="magic-overlay" data-target="#editorpictureBtn" data-edit="insertImage" />
+  <input id="file_upload" name="file_upload" type="file">
+  </div>
+</div>
+<div id="editor-queue" class="queue"></div>
+<div id="editor" class="richtext-editor"></div>

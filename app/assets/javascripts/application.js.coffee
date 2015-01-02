@@ -1,5 +1,7 @@
 #= require jquery_ujs
 #= require bootstrap
+#= require bootstrap-wysiwyg
+#= require jquery.uploadifive
 #= require polyfills
 #= require jquery.pjax
 

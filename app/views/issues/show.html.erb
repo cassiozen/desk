@@ -43,16 +43,17 @@
           <div class="panel panel-default">
             <div class="panel-heading panel-heading-pointer">Comment:</div>
             <div class="panel-body">
-              <form role="form" id="comment-form">
-                  <!-- <div v-component="richText" editorid="message" v-ref="message"></div> -->
-                  <textarea></textarea>
-                  <button id="send" class="btn btn-success">Comment</button>
-                  <% if @issue.open? %>
-                  <button  id="close" class="btn btn-default">Comment and close request</button>
-                  <% else %>
-                  <button id="reopen" class="btn btn-default">Comment and reopen request</button>
-                  <% end %>
-              </form>
+              <%= form_for @interaction, :url => new_issue_interaction_path(@issue), html: {id: "comment-form", role: "form"} do |f| %>
+                <%= hidden_field_tag :body %>
+                <%= render partial: "shared/richtext" %>
+
+                <button id="send" class="btn btn-success">Comment</button>
+                <% if @issue.open? %>
+                <button  id="close" class="btn btn-default">Comment and close request</button>
+                <% else %>
+                <button id="reopen" class="btn btn-default">Comment and reopen request</button>
+                <% end %>
+              <% end %>
             </div>
           </div>
         </div>

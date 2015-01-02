@@ -1,0 +1,38 @@
+/*
+UploadiFive
+Copyright (c) 2012 Reactive Apps, Ronnie Garcia
+*/
+
+
+.uploadifive-queue-item {
+	background-color: #F5F5F5;
+	border-bottom: 1px dotted #D5D5D5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font: 10px;
+	margin-top: 3px;
+	padding: 10px 15px;
+}
+.uploadifive-queue-item .close {
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY1MDk5MjFDNjc1NzExRTE4QzRFODIzODNBQjZFNDIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjY1MDk5MjFENjc1NzExRTE4QzRFODIzODNBQjZFNDIyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjUwOTkyMUE2NzU3MTFFMThDNEU4MjM4M0FCNkU0MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjUwOTkyMUI2NzU3MTFFMThDNEU4MjM4M0FCNkU0MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4QA6HdAAAAn0lEQVR42mIMDQ1lgAITID7DgAoMgfg8iMEEFWgD4tNAvBBJ0TQgPgeVY2ABYlMgroRKxgHxVyjOhIqB5DayQE1aBFXEgKQABlYC8UmY1fFAPJ0BE8wF4ghkN4LAFywKf8EYLEgOz8SiECTGDbKRCRoEyIrmoTkD5HZTJmg4tSM5PBmIs6AeZIDKnYZZXQUKApDvkEwCeXAKNFQYAAIMAICXH6XXdRpiAAAAAElFTkSuQmCC') 0 0 no-repeat;
+	display: block;
+	float: right;
+	height: 10px;
+	text-indent: -9999px;
+	width: 10px;
+	margin-top: 5px;
+}
+
+.uploadifive-queue-item .progress {
+	border: 1px solid #D0D0D0;
+	height: 3px;
+	margin-top: 12px;
+	margin-bottom: 10px !important;
+	width: 100%;
+}
+.uploadifive-queue-item .progress-bar {
+	background-color: #0072BC;
+	height: 3px;
+	width: 0;
+}

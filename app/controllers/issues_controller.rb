@@ -11,6 +11,8 @@ class IssuesController < ApplicationController
   end
 
   def show
+    @interaction = Interaction.new
+
     if request.headers['X-PJAX']
       render :layout => false
     end
