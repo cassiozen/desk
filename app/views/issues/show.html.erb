@@ -43,15 +43,16 @@
           <div class="panel panel-default">
             <div class="panel-heading panel-heading-pointer">Comment:</div>
             <div class="panel-body">
-              <%= form_for @interaction, :url => new_issue_interaction_path(@issue), html: {id: "comment-form", role: "form"} do |f| %>
+              <%= form_for [@issue, @interaction], html: {id: "comment-form", role: "form"} do |f| %>
+                <%= hidden_field_tag :interaction_type %>
                 <%= hidden_field_tag :body %>
                 <%= render partial: "shared/richtext" %>
 
                 <button id="send" class="btn btn-success">Comment</button>
                 <% if @issue.open? %>
-                <button  id="close" class="btn btn-default">Comment and close request</button>
+                <button id="close" class="btn btn-default">Comment and close request</button>
                 <% else %>
-                <button id="reopen" class="btn btn-default">Comment and reopen request</button>
+                <button id="open" class="btn btn-default">Comment and reopen request</button>
                 <% end %>
               <% end %>
             </div>

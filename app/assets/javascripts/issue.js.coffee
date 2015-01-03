@@ -2,6 +2,9 @@ Base = require("Base")
 utils = require("utils")
 
 class Issue extends Base.ViewController
+  events:
+    "click #send,#close,#open": "sendForm"
+
   constructor: ->
     super "issue", "/requests/:issue"
 
@@ -38,6 +41,22 @@ class Issue extends Base.ViewController
       overlay = $(@)
       target = $(overlay.data('target'))
       overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+
+  sendForm: (evt) ->
+    evt.preventDefault()
+
+    $("form #body").val $('#editor').cleanHtml()
+
+    if evt.target.id == "send"
+      $("form #interaction_type").val "message"
+    else if evt.target.id == "close"
+      $("form #interaction_type").val "closed"
+    else if evt.target.id == "open"
+      $("form #interaction_type").val "open"
+
+    @log $("form #interaction_type").value
+
+    $("form").submit();
 
   deactivate: ->
     super()

@@ -1,7 +1,7 @@
 .richtext-editor {
   max-height: 300px;
   height: 300px;
-  margin-top: 6px;
+  margin: 6px 0 6px 0;
   background-color: white;
   border-collapse: separate;
   border: 1px solid rgb(204, 204, 204);
@@ -17,11 +17,6 @@
 
 .fileuploading::before {
   content: attr(data-loading);
-}
-
-.mention {
-  font-style: italic;
-  color: #833;
 }
 
 .span2{
