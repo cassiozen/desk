@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :interactions
   end
 
+  resources :images, defaults: {format: :json}, only: [:create]
+
   root 'home#index'
 end

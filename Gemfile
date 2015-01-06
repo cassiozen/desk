@@ -34,6 +34,8 @@ gem 'unread'
 gem 'public_activity'
 # File Upload
 gem 'carrierwave'
+gem "mini_magick", "~> 4.0.0.rc"
+gem 'fog'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.

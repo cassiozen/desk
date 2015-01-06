@@ -42,6 +42,26 @@ class Issue extends Base.ViewController
       target = $(overlay.data('target'))
       overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
 
+
+
+  imageUpload: (file) ->
+    formData = new FormData()
+    uploader = $.Deferred()
+    formData.append('image', file, file.name)
+    $.ajax(
+      url: '/images'
+      data: formData
+      cache: false
+      processData: false
+      contentType: false
+      dataType: 'json'
+      type: 'POST'
+    )
+    .done (returnObj) -> uploader.resolve(returnObj.url)
+    .fail(uploader.reject)
+
+    return uploader.promise()
+
   sendForm: (evt) ->
     evt.preventDefault()
 
