@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :images, defaults: {format: :json}, only: [:create]
+  resources :attachments, defaults: {format: :json}, only: [:create]
 
   root 'home#index'
 end

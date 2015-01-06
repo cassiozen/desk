@@ -14,4 +14,9 @@ module IssuesHelper
     return "Due in #{time_ago_in_words(date)}" if date > DateTime.now
     return "Overdue by #{time_ago_in_words(date)}" if date < DateTime.now
   end
+
+  def truncate_filename(name)
+    name.truncate(30, omission: "...#{name.last(15)}")
+
+  end
 end

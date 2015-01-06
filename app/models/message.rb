@@ -3,6 +3,7 @@ class Message < ActiveRecord::Base
   tracked owner: Proc.new{ |controller, model| controller && controller.current_user }
 
   has_one :interaction, as: :interacteable
+  has_many :attachments
 
   delegate :user, :to => :interaction, :allow_nil => true
 

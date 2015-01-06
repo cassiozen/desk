@@ -48,3 +48,324 @@ div[data-role="editor-toolbar"] {
 .dropdown-menu a {
   cursor: pointer;
 }
+
+
+.file {
+  max-width: 310px;
+  display: inline-block;
+  border: 1px solid #D5D5D5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font: 10px;
+  margin: 3px 7px 3px 0px;
+  padding: 10px 8px 10px 36px;
+  background: #eee image-url("file_extensions/_unknown.png") no-repeat 4px 4px;
+
+  &.ace {
+    background: #eee image-url("file_extensions/ace.png") no-repeat 4px 4px !important;
+  }
+  &.ai {
+    background: #eee image-url("file_extensions/ai.png") no-repeat 4px 4px !important;
+  }
+  &.aif {
+    background: #eee image-url("file_extensions/aif.png") no-repeat 4px 4px !important;
+  }
+  &.aiff {
+    background: #eee image-url("file_extensions/aiff.png") no-repeat 4px 4px !important;
+  }
+  &.amr {
+    background: #eee image-url("file_extensions/amr.png") no-repeat 4px 4px !important;
+  }
+  &.asf {
+    background: #eee image-url("file_extensions/asf.png") no-repeat 4px 4px !important;
+  }
+  &.asx {
+    background: #eee image-url("file_extensions/asx.png") no-repeat 4px 4px !important;
+  }
+  &.bat {
+    background: #eee image-url("file_extensions/bat.png") no-repeat 4px 4px !important;
+  }
+  &.bin {
+    background: #eee image-url("file_extensions/bin.png") no-repeat 4px 4px !important;
+  }
+  &.bmp {
+    background: #eee image-url("file_extensions/bmp.png") no-repeat 4px 4px !important;
+  }
+  &.bup {
+    background: #eee image-url("file_extensions/bup.png") no-repeat 4px 4px !important;
+  }
+  &.cab {
+    background: #eee image-url("file_extensions/cab.png") no-repeat 4px 4px !important;
+  }
+  &.cbr {
+    background: #eee image-url("file_extensions/cbr.png") no-repeat 4px 4px !important;
+  }
+  &.cda {
+    background: #eee image-url("file_extensions/cda.png") no-repeat 4px 4px !important;
+  }
+  &.cdl {
+    background: #eee image-url("file_extensions/cdl.png") no-repeat 4px 4px !important;
+  }
+  &.cdr {
+    background: #eee image-url("file_extensions/cdr.png") no-repeat 4px 4px !important;
+  }
+  &.chm {
+    background: #eee image-url("file_extensions/chm.png") no-repeat 4px 4px !important;
+  }
+  &.dat {
+    background: #eee image-url("file_extensions/dat.png") no-repeat 4px 4px !important;
+  }
+  &.divx {
+    background: #eee image-url("file_extensions/divx.png") no-repeat 4px 4px !important;
+  }
+  &.dll {
+    background: #eee image-url("file_extensions/dll.png") no-repeat 4px 4px !important;
+  }
+  &.dmg {
+    background: #eee image-url("file_extensions/dmg.png") no-repeat 4px 4px !important;
+  }
+  &.doc {
+    background: #eee image-url("file_extensions/doc.png") no-repeat 4px 4px !important;
+  }
+  &.docx {
+    background: #eee image-url("file_extensions/docx.png") no-repeat 4px 4px !important;
+  }
+  &.dss {
+    background: #eee image-url("file_extensions/dss.png") no-repeat 4px 4px !important;
+  }
+  &.dvf {
+    background: #eee image-url("file_extensions/dvf.png") no-repeat 4px 4px !important;
+  }
+  &.dwg {
+    background: #eee image-url("file_extensions/dwg.png") no-repeat 4px 4px !important;
+  }
+  &.eml {
+    background: #eee image-url("file_extensions/eml.png") no-repeat 4px 4px !important;
+  }
+  &.eps {
+    background: #eee image-url("file_extensions/eps.png") no-repeat 4px 4px !important;
+  }
+  &.exe {
+    background: #eee image-url("file_extensions/exe.png") no-repeat 4px 4px !important;
+  }
+  &.fla {
+    background: #eee image-url("file_extensions/fla.png") no-repeat 4px 4px !important;
+  }
+  &.flv {
+    background: #eee image-url("file_extensions/flv.png") no-repeat 4px 4px !important;
+  }
+  &.gif {
+    background: #eee image-url("file_extensions/gif.png") no-repeat 4px 4px !important;
+  }
+  &.gz {
+    background: #eee image-url("file_extensions/gz.png") no-repeat 4px 4px !important;
+  }
+  &.hqx {
+    background: #eee image-url("file_extensions/hqx.png") no-repeat 4px 4px !important;
+  }
+  &.htm {
+    background: #eee image-url("file_extensions/htm.png") no-repeat 4px 4px !important;
+  }
+  &.html {
+    background: #eee image-url("file_extensions/html.png") no-repeat 4px 4px !important;
+  }
+  &.ifo {
+    background: #eee image-url("file_extensions/ifo.png") no-repeat 4px 4px !important;
+  }
+  &.indd {
+    background: #eee image-url("file_extensions/indd.png") no-repeat 4px 4px !important;
+  }
+  &.iso {
+    background: #eee image-url("file_extensions/iso.png") no-repeat 4px 4px !important;
+  }
+  &.jar {
+    background: #eee image-url("file_extensions/jar.png") no-repeat 4px 4px !important;
+  }
+  &.jpeg {
+    background: #eee image-url("file_extensions/jpeg.png") no-repeat 4px 4px !important;
+  }
+  &.jpg {
+    background: #eee image-url("file_extensions/jpg.png") no-repeat 4px 4px !important;
+  }
+  &.lnk {
+    background: #eee image-url("file_extensions/lnk.png") no-repeat 4px 4px !important;
+  }
+  &.log {
+    background: #eee image-url("file_extensions/log.png") no-repeat 4px 4px !important;
+  }
+  &.m4a {
+    background: #eee image-url("file_extensions/m4a.png") no-repeat 4px 4px !important;
+  }
+  &.m4b {
+    background: #eee image-url("file_extensions/m4b.png") no-repeat 4px 4px !important;
+  }
+  &.m4p {
+    background: #eee image-url("file_extensions/m4p.png") no-repeat 4px 4px !important;
+  }
+  &.m4v {
+    background: #eee image-url("file_extensions/m4v.png") no-repeat 4px 4px !important;
+  }
+  &.mcd {
+    background: #eee image-url("file_extensions/mcd.png") no-repeat 4px 4px !important;
+  }
+  &.mdb {
+    background: #eee image-url("file_extensions/mdb.png") no-repeat 4px 4px !important;
+  }
+  &.mid {
+    background: #eee image-url("file_extensions/mid.png") no-repeat 4px 4px !important;
+  }
+  &.mov {
+    background: #eee image-url("file_extensions/mov.png") no-repeat 4px 4px !important;
+  }
+  &.mp2 {
+    background: #eee image-url("file_extensions/mp2.png") no-repeat 4px 4px !important;
+  }
+  &.mp4 {
+    background: #eee image-url("file_extensions/mp4.png") no-repeat 4px 4px !important;
+  }
+  &.mpeg {
+    background: #eee image-url("file_extensions/mpeg.png") no-repeat 4px 4px !important;
+  }
+  &.mpg {
+    background: #eee image-url("file_extensions/mpg.png") no-repeat 4px 4px !important;
+  }
+  &.msi {
+    background: #eee image-url("file_extensions/msi.png") no-repeat 4px 4px !important;
+  }
+  &.mswmm {
+    background: #eee image-url("file_extensions/mswmm.png") no-repeat 4px 4px !important;
+  }
+  &.ogg {
+    background: #eee image-url("file_extensions/ogg.png") no-repeat 4px 4px !important;
+  }
+  &.pdf {
+    background: #eee image-url("file_extensions/pdf.png") no-repeat 4px 4px !important;
+  }
+  &.png {
+    background: #eee image-url("file_extensions/png.png") no-repeat 4px 4px !important;
+  }
+  &.pps {
+    background: #eee image-url("file_extensions/pps.png") no-repeat 4px 4px !important;
+  }
+  &.ppt {
+    background: #eee image-url("file_extensions/ppt.png") no-repeat 4px 4px !important;
+  }
+  &.pptx {
+    background: #eee image-url("file_extensions/pptx.png") no-repeat 4px 4px !important;
+  }
+  &.ps {
+    background: #eee image-url("file_extensions/ps.png") no-repeat 4px 4px !important;
+  }
+  &.psd {
+    background: #eee image-url("file_extensions/psd.png") no-repeat 4px 4px !important;
+  }
+  &.pst {
+    background: #eee image-url("file_extensions/pst.png") no-repeat 4px 4px !important;
+  }
+  &.ptb {
+    background: #eee image-url("file_extensions/ptb.png") no-repeat 4px 4px !important;
+  }
+  &.pub {
+    background: #eee image-url("file_extensions/pub.png") no-repeat 4px 4px !important;
+  }
+  &.qbb {
+    background: #eee image-url("file_extensions/qbb.png") no-repeat 4px 4px !important;
+  }
+  &.qbw {
+    background: #eee image-url("file_extensions/qbw.png") no-repeat 4px 4px !important;
+  }
+  &.qxd {
+    background: #eee image-url("file_extensions/qxd.png") no-repeat 4px 4px !important;
+  }
+  &.ram {
+    background: #eee image-url("file_extensions/ram.png") no-repeat 4px 4px !important;
+  }
+  &.rar {
+    background: #eee image-url("file_extensions/rar.png") no-repeat 4px 4px !important;
+  }
+  &.rm {
+    background: #eee image-url("file_extensions/rm.png") no-repeat 4px 4px !important;
+  }
+  &.rmvb {
+    background: #eee image-url("file_extensions/rmvb.png") no-repeat 4px 4px !important;
+  }
+  &.rtf {
+    background: #eee image-url("file_extensions/rtf.png") no-repeat 4px 4px !important;
+  }
+  &.sea {
+    background: #eee image-url("file_extensions/sea.png") no-repeat 4px 4px !important;
+  }
+  &.ses {
+    background: #eee image-url("file_extensions/ses.png") no-repeat 4px 4px !important;
+  }
+  &.sit {
+    background: #eee image-url("file_extensions/sit.png") no-repeat 4px 4px !important;
+  }
+  &.sitx {
+    background: #eee image-url("file_extensions/sitx.png") no-repeat 4px 4px !important;
+  }
+  &.ss {
+    background: #eee image-url("file_extensions/ss.png") no-repeat 4px 4px !important;
+  }
+  &.swf {
+    background: #eee image-url("file_extensions/swf.png") no-repeat 4px 4px !important;
+  }
+  &.tgz {
+    background: #eee image-url("file_extensions/tgz.png") no-repeat 4px 4px !important;
+  }
+  &.thm {
+    background: #eee image-url("file_extensions/thm.png") no-repeat 4px 4px !important;
+  }
+  &.tif {
+    background: #eee image-url("file_extensions/tif.png") no-repeat 4px 4px !important;
+  }
+  &.tmp {
+    background: #eee image-url("file_extensions/tmp.png") no-repeat 4px 4px !important;
+  }
+  &.torrent {
+    background: #eee image-url("file_extensions/torrent.png") no-repeat 4px 4px !important;
+  }
+  &.ttf {
+    background: #eee image-url("file_extensions/ttf.png") no-repeat 4px 4px !important;
+  }
+  &.txt {
+    background: #eee image-url("file_extensions/txt.png") no-repeat 4px 4px !important;
+  }
+  &.vcd {
+    background: #eee image-url("file_extensions/vcd.png") no-repeat 4px 4px !important;
+  }
+  &.vob {
+    background: #eee image-url("file_extensions/vob.png") no-repeat 4px 4px !important;
+  }
+  &.wav {
+    background: #eee image-url("file_extensions/wav.png") no-repeat 4px 4px !important;
+  }
+  &.wma {
+    background: #eee image-url("file_extensions/wma.png") no-repeat 4px 4px !important;
+  }
+  &.wmv {
+    background: #eee image-url("file_extensions/wmv.png") no-repeat 4px 4px !important;
+  }
+  &.wps {
+    background: #eee image-url("file_extensions/wps.png") no-repeat 4px 4px !important;
+  }
+  &.xls {
+    background: #eee image-url("file_extensions/xls.png") no-repeat 4px 4px !important;
+  }
+  &.xlsx {
+    background: #eee image-url("file_extensions/xlsx.png") no-repeat 4px 4px !important;
+  }
+  &.xpi {
+    background: #eee image-url("file_extensions/xpi.png") no-repeat 4px 4px !important;
+  }
+  &.zip {
+    background: #eee image-url("file_extensions/zip.png") no-repeat 4px 4px !important;
+  }
+
+  a{
+    text-decoration: none;
+    color: #666;
+  }
+}
+

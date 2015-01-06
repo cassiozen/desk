@@ -20,8 +20,18 @@
                   <div class="panel panel-default">
                     <div class="panel-heading panel-heading-pointer"><strong><%= interaction.user.name %></strong> commented <%= time_ago_in_words interaction.created_at %> ago</div>
                     <div class="panel-body"><%= interaction.interacteable.body.html_safe %></div>
+                    <% if interaction.interacteable.attachments.length > 0 %>
+                    <div class="panel-footer">
+                      <% interaction.interacteable.attachments.each do |attachment| %>
+                        <div class="file <%= attachment.file.file.extension %>">
+                          <a href="<%= attachment.file.url %>" download><%= truncate_filename(attachment.file_identifier) %></a>
+                        </div>
+                      <% end %>
+                    </div>
+                    <% end %>
                   </div>
                 </div>
+
               </div>
             <% elsif interaction.interacteable_type == "IssueState" %>
               <div class="interaction-state">

@@ -3,11 +3,16 @@ class InteractionsController < ApplicationController
     issue = Issue.find(params[:issue_id])
     messageParam = params[:body]
     interaction_type_param = params[:interaction_type]
+    attachment_ids = params[:attachment_ids]
+
 
     # Create message interaction if there's a message body
-    unless messageParam.empty?
+    if not messageParam.empty? and not attachment_ids.empty?
       messageInteraction = Interaction.new({issue: issue, user: current_user})
       message = Message.new({body: messageParam})
+      if(attachment_ids)
+        message.attachments.push(*Attachment.find(attachment_ids))
+      end
       messageInteraction.interacteable = message
       messageSaved = messageInteraction.save
     end
