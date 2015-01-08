@@ -67,8 +67,16 @@
                       <li><a id="hold" href="#">Comment and put request on hold</a></li>
                     </ul>
                   </div>
-                <% else %>
-                <button id="open" class="btn btn-default">Comment and reopen request</button>
+                <% elsif @issue.pending? %>
+                  <div class="btn-group">
+                    <button data-toggle="dropdown" class="btn dropdown-toggle">Comment and change status <span class="caret"></span></button>
+                    <ul class="dropdown-menu pull-middle pull-center" style="margin-right: -95px; margin-top: -74px;">
+                      <li><a id="open" href="#">Comment and reopen request</a></li>
+                      <li><a id="close" href="#">Comment and close request</a></li>
+                    </ul>
+                  </div>
+                <% elsif @issue.closed? %>
+                  <button id="open" class="btn btn-default">Comment and reopen request</button>
                 <% end %>
               <% end %>
             </div>
