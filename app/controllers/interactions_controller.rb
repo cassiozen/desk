@@ -7,7 +7,7 @@ class InteractionsController < ApplicationController
 
 
     # Create message interaction if there's a message body
-    if not messageParam.empty? and not attachment_ids.empty?
+    if not messageParam.empty?
       messageInteraction = Interaction.new({issue: issue, user: current_user})
       message = Message.new({body: messageParam})
       if(attachment_ids)
@@ -18,7 +18,7 @@ class InteractionsController < ApplicationController
     end
 
     # Create an issue state interaction if there's an issue state param
-    if (interaction_type_param == "open" and issue.closed?) or (interaction_type_param == "closed" and issue.open?)
+    if (interaction_type_param == "open" and not issue.open?) or (interaction_type_param == "closed" and not issue.closed?) or (interaction_type_param == "pending" and not issue.pending?)
       stateInteraction = Interaction.new({issue: issue, user: current_user})
       state = IssueState.new({issue: issue, state: interaction_type_param})
       stateInteraction.interacteable = state

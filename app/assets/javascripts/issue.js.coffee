@@ -3,7 +3,7 @@ utils = require("utils")
 
 class Issue extends Base.ViewController
   events:
-    "click #send,#close,#open": "sendForm"
+    "click #send,#close,#open,#hold": "sendForm"
 
   constructor: ->
     super "issue", "/requests/:issue"
@@ -77,8 +77,8 @@ class Issue extends Base.ViewController
       $("form #interaction_type").val "closed"
     else if evt.target.id == "open"
       $("form #interaction_type").val "open"
-
-    @log $("form #interaction_type").value
+    else if evt.target.id == "hold"
+      $("form #interaction_type").val "pending"
 
     $("form").submit();
 
