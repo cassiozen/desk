@@ -16,17 +16,17 @@ class Issue extends Base.ViewController
     @log("Issue")
 
     # Show tooltips for toolbar buttons
-    $('a[title]').tooltip(container:'body')
+    @$('a[title]').tooltip(container:'body')
     # Avoid closing dropdown when focusing on input field
-    $('.dropdown-menu input').click(-> false)
+    @$('.dropdown-menu input').click(-> false)
       .change(-> $(@).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle'))
       .keydown('esc', -> @value = ''; $(@).change())
 
     # Init Bootstrap Wysiwyg
-    $('#editor').wysiwyg(toolbarSelector: '[data-role=editor-toolbar]', fileUpload: @imageUpload)
+    @$('#editor').wysiwyg(toolbarSelector: '[data-role=editor-toolbar]', fileUpload: @imageUpload)
 
     # Init Uploadifive (file attachments)
-    $('#file_upload').uploadifive
+    @$('#file_upload').uploadifive
       'auto'             : true
       'dnd'              : false
       'queueID'          : 'editor-queue'
@@ -41,7 +41,7 @@ class Issue extends Base.ViewController
         file.queueItem.data("id", JSON.parse(data).id)
         file.queueItem.find('.attachment_id').val(file.queueItem.data("id"))
 
-    $('[data-role=magic-overlay]').each ->
+    @$('[data-role=magic-overlay]').each ->
       overlay = $(@)
       target = $(overlay.data('target'))
       overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
@@ -68,19 +68,23 @@ class Issue extends Base.ViewController
 
   sendForm: (evt) ->
     evt.preventDefault()
+    interactionform = @$("form")
+    evt.currentTarget = interactionform[0] #Pjax form submission needs currentTarget to be the form element
 
-    $("form #body").val $('#editor').cleanHtml()
+    @$("form #body").val @$('#editor').cleanHtml()
 
     if evt.target.id == "send"
-      $("form #interaction_type").val "message"
+      @$("form #interaction_type").val "message"
     else if evt.target.id == "close"
-      $("form #interaction_type").val "closed"
+      @$("form #interaction_type").val "closed"
     else if evt.target.id == "open"
-      $("form #interaction_type").val "open"
+      @$("form #interaction_type").val "open"
     else if evt.target.id == "hold"
-      $("form #interaction_type").val "pending"
+      @$("form #interaction_type").val "pending"
 
-    $("form").submit();
+    $.pjax.submit(evt, '[data-pjax-container]', push: false)
+
+    interactionform.submit();
 
   deactivate: ->
     super()

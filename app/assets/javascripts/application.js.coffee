@@ -20,7 +20,9 @@ routebeer = require('routebeer')
 ]
 
 # Start Pjax
-$(document).pjax('a', '[data-pjax-container]')
+$(document).pjax 'a', '[data-pjax-container]'
+$(document).on 'submit', 'form[data-pjax]', (event) ->
+  $.pjax.submit(event, '[data-pjax-container]', push: false)
 
 # Setup sections and routes
 
