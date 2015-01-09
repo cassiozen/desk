@@ -15,11 +15,11 @@
           <% @issue.interactions.each do |interaction| %>
             <% if interaction.interacteable_type == "Message" %>
               <div class="row">
-                <div class="col-md-1"><%= image_tag interaction.user.picture, class: "img-rounded" %></div>
+                <div class="col-md-1 hidden-xs hidden-sm"><%= image_tag interaction.user.picture, class: "img-rounded" %></div>
                 <div class="col-md-11 panel-message">
                   <div class="panel panel-default">
                     <div class="panel-heading panel-heading-pointer"><strong><%= interaction.user.name %></strong> commented <%= time_ago_in_words interaction.created_at %> ago</div>
-                    <div class="panel-body"><%= interaction.interacteable.body.html_safe %></div>
+                    <div class="panel-body"><%= interaction.interacteable.body.html_safe %>
                     <% if interaction.interacteable.attachments.length > 0 %>
                     <div class="panel-footer">
                       <% interaction.interacteable.attachments.each do |attachment| %>
@@ -29,6 +29,7 @@
                       <% end %>
                     </div>
                     <% end %>
+                    </div>
                   </div>
                 </div>
 
@@ -48,7 +49,7 @@
       </div>
       <div class="closed-banner"></div>
       <div class="container-fluid row message-reply">
-        <div class="col-md-1"><%= image_tag current_user.picture, class: "img-rounded" %></div>
+        <div class="col-md-1 hidden-xs hidden-sm"><%= image_tag current_user.picture, class: "img-rounded" %></div>
         <div class="col-md-11 panel-message">
           <div class="panel panel-default">
             <div class="panel-heading panel-heading-pointer">Comment:</div>
@@ -84,6 +85,6 @@
         </div>
       </div>
     </div>
-    <aside class="issue-actions">
+    <aside class="issue-actions hidden-xs">
     </aside>
 </section>
