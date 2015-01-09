@@ -68,8 +68,7 @@ class Issue extends Base.ViewController
 
   sendForm: (evt) ->
     evt.preventDefault()
-    interactionform = @$("form")
-    evt.currentTarget = interactionform[0] #Pjax form submission needs currentTarget to be the form element
+    evt.currentTarget = @$("form")[0] #Pjax form submission needs currentTarget to be the form element
 
     @$("form #body").val @$('#editor').cleanHtml()
 
@@ -82,9 +81,7 @@ class Issue extends Base.ViewController
     else if evt.target.id == "hold"
       @$("form #interaction_type").val "pending"
 
-    $.pjax.submit(evt, '[data-pjax-container]', push: false)
-
-    interactionform.submit();
+    $.pjax.submit(evt, '[data-pjax-container]', push: false, scrollTo: $(document).height()-$(window).height())
 
   deactivate: ->
     super()
