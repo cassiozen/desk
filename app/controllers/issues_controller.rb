@@ -17,4 +17,16 @@ class IssuesController < ApplicationController
       render :layout => false
     end
   end
+
+  def new
+    @issue = Issue.new
+
+    if request.headers['X-PJAX']
+      render :layout => false
+    end
+  end
+
+  def create
+
+  end
 end

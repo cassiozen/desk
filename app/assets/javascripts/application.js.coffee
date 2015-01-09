@@ -9,6 +9,7 @@ Home = require("Home")
 Dashboard = require("Dashboard")
 Issues = require("Issues")
 Issue = require("Issue")
+CreateIssue = require("CreateIssue")
 routebeer = require('routebeer')
 
 # Create sections
@@ -16,7 +17,9 @@ routebeer = require('routebeer')
   new Home(@)
   new Dashboard(@)
   new Issues(@)
+  new CreateIssue(@)
   new Issue(@)
+
 ]
 
 # Start Pjax

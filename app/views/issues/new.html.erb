@@ -1,0 +1,25 @@
+<%= render partial: "shared/heading", locals: {title: "New Request"} %>
+<%= flash_messages %>
+<section id="create-issue" class="width-wrapper">
+  <!-- New Budget -->
+  <div class="container-fluid row">
+    <div class="col-md-1 hidden-xs hidden-sm"><%= image_tag current_user.picture, class: "img-rounded" %></div>
+    <div class="col-md-11 panel-message">
+      <div class="panel panel-default">
+        <div class="panel-heading panel-heading-pointer">New Request</div>
+        <div class="panel-body">
+          <%= form_for [@issue], html: {:id => "budget-form", :role => "form"} do |f| %>
+          <form role="form" id="budget-form">
+            <div class="form-group">
+              <%= f.text_field :subject, class: "form-control", required: true %>
+            </div>
+            <%= hidden_field_tag :body %>
+            <%= render partial: "shared/richtext" %>
+            <button id="send" class="btn btn-success">Submit Request</button>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
