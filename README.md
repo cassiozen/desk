@@ -18,3 +18,10 @@ along with a js router and a basic view-controller class (coffeescript). All vie
 are instantiated as the page loads, but the router activates and deactivates views
 as necessary.
 
+#### Multitenancy
+
+Jeetflow has multi-tenant support based on subdomain. To test locally either configure
+local vhosts (or use a tool such as POW). Another quick way to test is use an external
+domain that points to 127.0.0.1 such as vcap.me (in e.g. subdomain.vcap.me:3000)
+
+
